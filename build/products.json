@@ -1,0 +1,1518 @@
+{
+ "food": [
+  {
+   "fillType": "ADVOCAAT",
+   "title": "$l10n_fillType_advocaat",
+   "english": "Advocaat",
+   "source": "fed"
+  },
+  {
+   "fillType": "APPLE",
+   "title": "$l10n_fillType_apple",
+   "english": "Apple",
+   "source": "fed"
+  },
+  {
+   "fillType": "APPLEJUICE",
+   "title": "$l10n_fillType_appleJuice",
+   "english": "Apple juice",
+   "source": "fed"
+  },
+  {
+   "fillType": "APPLESAUCE",
+   "title": "$l10n_fillType_applesauce",
+   "english": "Applesauce",
+   "source": "fed"
+  },
+  {
+   "fillType": "BAKERY_PRODUCT",
+   "title": "$l10n_fillType_bakeryProduct",
+   "english": "Baked goods",
+   "source": "fed"
+  },
+  {
+   "fillType": "BARLEYBEER_BOTTLE",
+   "title": "$l10n_fillType_barleyBeer_bottle",
+   "english": "Barley bottled beer",
+   "source": "fed"
+  },
+  {
+   "fillType": "BARLEYBEER",
+   "title": "$l10n_fillType_barleyBeer",
+   "english": "Barley cask beer",
+   "source": "fed"
+  },
+  {
+   "fillType": "BARLEYMALT",
+   "title": "$l10n_fillType_barleyMalt",
+   "english": "Barley malt",
+   "source": "fed"
+  },
+  {
+   "fillType": "BEANSOUP",
+   "title": "$l10n_fillType_beanSoup",
+   "english": "Bean soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "BEEFMEAT",
+   "title": "$l10n_fillType_beefMeat",
+   "english": "Beef",
+   "source": "fed"
+  },
+  {
+   "fillType": "BEETROOT",
+   "title": "$l10n_fillType_beetRoot",
+   "english": "Beetroot",
+   "source": "base"
+  },
+  {
+   "fillType": "BLACKBERRY",
+   "title": "$l10n_fillType_blackBerry",
+   "english": "Blackberry",
+   "source": "fed"
+  },
+  {
+   "fillType": "BLACKBERRYJAM",
+   "title": "$l10n_fillType_blackBerryJam",
+   "english": "Blackberry jelly",
+   "source": "fed"
+  },
+  {
+   "fillType": "BUFFALOMILK_BOTTLED",
+   "title": "$l10n_fillType_buffaloMilk_bottled",
+   "english": "Bottled buffalo milk",
+   "source": "base"
+  },
+  {
+   "fillType": "GOATMILK_BOTTLED",
+   "title": "$l10n_fillType_goatMilk_bottled",
+   "english": "Bottled goat milk",
+   "source": "base"
+  },
+  {
+   "fillType": "MILK_BOTTLED",
+   "title": "$l10n_fillType_milk_bottled",
+   "english": "Bottled milk",
+   "source": "base"
+  },
+  {
+   "fillType": "BRAN",
+   "title": "$l10n_fillType_bran",
+   "english": "Bran",
+   "source": "fed"
+  },
+  {
+   "fillType": "BREAD",
+   "title": "$l10n_fillType_bread",
+   "english": "Bread",
+   "source": "base"
+  },
+  {
+   "fillType": "BUCKWHEATFLOUR",
+   "title": "$l10n_fillType_buckwheatflour",
+   "english": "Buckwheat flour",
+   "source": "fed"
+  },
+  {
+   "fillType": "BUFFALOMOZZARELLA",
+   "title": "$l10n_fillType_buffaloMozzarella",
+   "english": "Buffalo mozzarella",
+   "source": "base"
+  },
+  {
+   "fillType": "BUN",
+   "title": "$l10n_fillType_bun",
+   "english": "Bun",
+   "source": "fed"
+  },
+  {
+   "fillType": "BUTTER",
+   "title": "$l10n_fillType_butter",
+   "english": "Butter",
+   "source": "base"
+  },
+  {
+   "fillType": "CABBAGESOUP",
+   "title": "$l10n_fillType_cabbageSoup",
+   "english": "Cabbage soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "CAKE",
+   "title": "$l10n_fillType_cake",
+   "english": "Cake",
+   "source": "base"
+  },
+  {
+   "fillType": "CANNED_PEAS",
+   "title": "$l10n_fillType_cannedPea",
+   "english": "Canned peas",
+   "source": "base"
+  },
+  {
+   "fillType": "CANOLA_OIL",
+   "title": "$l10n_fillType_canolaOil",
+   "english": "Canola oil",
+   "source": "base"
+  },
+  {
+   "fillType": "CARROTBAG",
+   "title": "$l10n_fillType_carrotBag",
+   "english": "Carrot Bag",
+   "source": "fed"
+  },
+  {
+   "fillType": "CARROTJUICE",
+   "title": "$l10n_fillType_carrotJuice",
+   "english": "Carrot juice",
+   "source": "fed"
+  },
+  {
+   "fillType": "CARROT",
+   "title": "$l10n_fillType_carrots",
+   "english": "Carrots",
+   "source": "base"
+  },
+  {
+   "fillType": "CAULIFLOWER",
+   "title": "$l10n_fillType_cauliFlower",
+   "english": "Cauliflower",
+   "source": "fed"
+  },
+  {
+   "fillType": "CEREAL",
+   "title": "$l10n_fillType_cereal",
+   "english": "Cereal",
+   "source": "base"
+  },
+  {
+   "fillType": "CHEESE",
+   "title": "$l10n_fillType_cheese",
+   "english": "Cheese",
+   "source": "base"
+  },
+  {
+   "fillType": "CHERRY",
+   "title": "$l10n_fillType_cherry",
+   "english": "Cherry",
+   "source": "fed"
+  },
+  {
+   "fillType": "CHERRYJAM",
+   "title": "$l10n_fillType_cherryJam",
+   "english": "Cherry jam",
+   "source": "fed"
+  },
+  {
+   "fillType": "CHERRYJUICE",
+   "title": "$l10n_fillType_cherryJuice",
+   "english": "Cherry juice",
+   "source": "fed"
+  },
+  {
+   "fillType": "CHILICONCARNE",
+   "title": "$l10n_fillType_chiliconcarne",
+   "english": "Chili con Carne",
+   "source": "fed"
+  },
+  {
+   "fillType": "CHILLI",
+   "title": "$l10n_fillType_chilli",
+   "english": "Chilli",
+   "source": "base"
+  },
+  {
+   "fillType": "CHOCOLATE",
+   "title": "$l10n_fillType_chocolate",
+   "english": "Chocolate",
+   "source": "base"
+  },
+  {
+   "fillType": "COD",
+   "title": "$l10n_fillType_cod",
+   "english": "Cod",
+   "source": "fed"
+  },
+  {
+   "fillType": "CODFILLET",
+   "title": "$l10n_fillType_codFillet",
+   "english": "Cod fillet",
+   "source": "fed"
+  },
+  {
+   "fillType": "MAIZE_OIL",
+   "title": "$l10n_fillType_MAIZE_OIL",
+   "english": "Corn oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "CRABSALAD",
+   "title": "$l10n_fillType_crabSalad",
+   "english": "Crab salad",
+   "source": "fed"
+  },
+  {
+   "fillType": "CRABS",
+   "title": "$l10n_fillType_crabs",
+   "english": "Crabs",
+   "source": "fed"
+  },
+  {
+   "fillType": "CREAM",
+   "title": "$l10n_fillType_cream",
+   "english": "Cream",
+   "source": "fed"
+  },
+  {
+   "fillType": "FRESHCHEESE",
+   "title": "$l10n_fillType_freshCheese",
+   "english": "Cream cheese",
+   "source": "fed"
+  },
+  {
+   "fillType": "CREAMEDSPINACH",
+   "title": "$l10n_fillType_creamedspinach",
+   "english": "Creamed spinach",
+   "source": "fed"
+  },
+  {
+   "fillType": "CROQUETTES",
+   "title": "$l10n_fillType_croquettes",
+   "english": "Croquettes",
+   "source": "fed"
+  },
+  {
+   "fillType": "ICECRUSHED",
+   "title": "$l10n_fillType_icecrushed",
+   "english": "Crushed ice",
+   "source": "fed"
+  },
+  {
+   "fillType": "CURRANTS",
+   "title": "$l10n_fillType_currants",
+   "english": "Currants",
+   "source": "fed"
+  },
+  {
+   "fillType": "EEL",
+   "title": "$l10n_fillType_eel",
+   "english": "Eel",
+   "source": "fed"
+  },
+  {
+   "fillType": "EGG",
+   "title": "$l10n_fillType_egg",
+   "english": "Egg",
+   "source": "base"
+  },
+  {
+   "fillType": "ENOKI",
+   "title": "$l10n_fillType_enoki",
+   "english": "Enoki",
+   "source": "base"
+  },
+  {
+   "fillType": "FERMENTEDNAPACABBAGE",
+   "title": "$l10n_fillType_fermentedNapaCabbage",
+   "english": "Fermented napa cabbage",
+   "source": "base"
+  },
+  {
+   "fillType": "FISHANDCHIPS",
+   "title": "$l10n_fillType_fishandchips",
+   "english": "Fish and chips",
+   "source": "fed"
+  },
+  {
+   "fillType": "LINSEED_OIL",
+   "title": "$l10n_fillType_LINSEED_OIL",
+   "english": "Flaxseed oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "FLOUR",
+   "title": "$l10n_fillType_flour",
+   "english": "Flour",
+   "source": "base"
+  },
+  {
+   "fillType": "FRENCHFRIES",
+   "title": "$l10n_fillType_frenchFries",
+   "english": "French fries",
+   "source": "fed"
+  },
+  {
+   "fillType": "FRIEDONION",
+   "title": "$l10n_fillType_friedonion",
+   "english": "Fried onions",
+   "source": "fed"
+  },
+  {
+   "fillType": "FRUITBRANDY",
+   "title": "$l10n_fillType_fruitBrandy",
+   "english": "Fruit brandy",
+   "source": "fed"
+  },
+  {
+   "fillType": "GARLIC",
+   "title": "$l10n_fillType_garlic",
+   "english": "Garlic",
+   "source": "base"
+  },
+  {
+   "fillType": "GOATCHEESE",
+   "title": "$l10n_fillType_goatCheese",
+   "english": "Goat cheese",
+   "source": "base"
+  },
+  {
+   "fillType": "GOATMILK",
+   "title": "$l10n_fillType_goatMilk",
+   "english": "Goat milk",
+   "source": "base"
+  },
+  {
+   "fillType": "GRAINALCOHOL",
+   "title": "$l10n_fillType_grainAlcohol",
+   "english": "Grain alcohol",
+   "source": "fed"
+  },
+  {
+   "fillType": "GRAPE",
+   "title": "$l10n_fillType_grape",
+   "english": "Grape",
+   "source": "base"
+  },
+  {
+   "fillType": "GRAPEJUICE",
+   "title": "$l10n_fillType_grapeJuice",
+   "english": "Grape juice",
+   "source": "base"
+  },
+  {
+   "fillType": "HAM",
+   "title": "$l10n_fillType_ham",
+   "english": "Ham",
+   "source": "fed"
+  },
+  {
+   "fillType": "HEMP_OIL",
+   "title": "$l10n_fillType_HEMP_OIL",
+   "english": "Hemp oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "HERRINGTOMATENSAUCE",
+   "title": "$l10n_fillType_herringTomatosauce",
+   "english": "Herring tomato sauce",
+   "source": "fed"
+  },
+  {
+   "fillType": "HERRING",
+   "title": "$l10n_fillType_herring",
+   "english": "Herrings",
+   "source": "fed"
+  },
+  {
+   "fillType": "HONEY",
+   "title": "$l10n_fillType_honey",
+   "english": "Honey",
+   "source": "base"
+  },
+  {
+   "fillType": "HOPS",
+   "title": "$l10n_fillType_hops",
+   "english": "Hops",
+   "source": "fed"
+  },
+  {
+   "fillType": "JARRED_GREENBEAN",
+   "title": "$l10n_fillType_jarredGreenBean",
+   "english": "Jarred green beans",
+   "source": "base"
+  },
+  {
+   "fillType": "KETCHUP",
+   "title": "$l10n_fillType_ketchup",
+   "english": "Ketchup",
+   "source": "fed"
+  },
+  {
+   "fillType": "LAMB",
+   "title": "$l10n_fillType_lamb",
+   "english": "Lamb meat",
+   "source": "fed"
+  },
+  {
+   "fillType": "LETTUCE",
+   "title": "$l10n_fillType_lettuce",
+   "english": "Lettuce",
+   "source": "base"
+  },
+  {
+   "fillType": "HUMMER",
+   "title": "$l10n_fillType_hummer",
+   "english": "Lobster",
+   "source": "fed"
+  },
+  {
+   "fillType": "MALTBEER",
+   "title": "$l10n_fillType_maltBeer",
+   "english": "Malt beer",
+   "source": "fed"
+  },
+  {
+   "fillType": "MAYONAISSE",
+   "title": "$l10n_fillType_mayonaisse",
+   "english": "Mayonnaise",
+   "source": "fed"
+  },
+  {
+   "fillType": "MILLETBEER",
+   "title": "$l10n_fillType_milletBeer",
+   "english": "Millet draft beer",
+   "source": "fed"
+  },
+  {
+   "fillType": "MILLETMALT",
+   "title": "$l10n_fillType_milletMalt",
+   "english": "Millet malt",
+   "source": "fed"
+  },
+  {
+   "fillType": "MILLETPORRIDGE",
+   "title": "$l10n_fillType_milletPorridge",
+   "english": "Millet porridge",
+   "source": "fed"
+  },
+  {
+   "fillType": "MIRABELLES",
+   "title": "$l10n_fillType_mirabelles",
+   "english": "Mirabelle",
+   "source": "fed"
+  },
+  {
+   "fillType": "MIRABELLESJAM",
+   "title": "$l10n_fillType_mirabellesJam",
+   "english": "Mirabelle jam",
+   "source": "fed"
+  },
+  {
+   "fillType": "MOLASSES",
+   "title": "$l10n_fillType_molasses",
+   "english": "Molasses",
+   "source": "fed"
+  },
+  {
+   "fillType": "MOZZARELLA",
+   "title": "$l10n_fillType_mozzarella",
+   "english": "Mozzarella",
+   "source": "fed"
+  },
+  {
+   "fillType": "MUSHROOMSOUP",
+   "title": "$l10n_fillType_mushroomSoup",
+   "english": "Mushroom soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "MUSHROOMS",
+   "title": "$l10n_fillType_mushrooms",
+   "english": "Mushrooms",
+   "source": "fed"
+  },
+  {
+   "fillType": "MUSTARDGLASS",
+   "title": "$l10n_fillType_mustardGlass",
+   "english": "Mustard",
+   "source": "fed"
+  },
+  {
+   "fillType": "NAPACABBAGE",
+   "title": "$l10n_fillType_napaCabbage",
+   "english": "Napa cabbage",
+   "source": "base"
+  },
+  {
+   "fillType": "NOODLESOUP",
+   "title": "$l10n_fillType_noodleSoup",
+   "english": "Noodle soup",
+   "source": "base"
+  },
+  {
+   "fillType": "NOODLES",
+   "title": "$l10n_fillType_noodles",
+   "english": "Noodles",
+   "source": "fed"
+  },
+  {
+   "fillType": "OATMILK",
+   "title": "$l10n_fillType_oatMilk",
+   "english": "Oat milk",
+   "source": "fed"
+  },
+  {
+   "fillType": "OATMEAL",
+   "title": "$l10n_fillType_oatmeal",
+   "english": "Oatmeal",
+   "source": "fed"
+  },
+  {
+   "fillType": "OLIVE_OIL",
+   "title": "$l10n_fillType_oliveOil",
+   "english": "Olive oil",
+   "source": "base"
+  },
+  {
+   "fillType": "ONION",
+   "title": "$l10n_fillType_onion",
+   "english": "Onion",
+   "source": "fed"
+  },
+  {
+   "fillType": "ONIONBAG",
+   "title": "$l10n_fillType_onionBag",
+   "english": "Onion bag",
+   "source": "fed"
+  },
+  {
+   "fillType": "ONIONSALT",
+   "title": "$l10n_fillType_onionSalt",
+   "english": "Onion salt",
+   "source": "fed"
+  },
+  {
+   "fillType": "ONIONSOUP",
+   "title": "$l10n_fillType_onionSoup",
+   "english": "Onion soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "OYSTER",
+   "title": "$l10n_fillType_oyster",
+   "english": "Oyster",
+   "source": "base"
+  },
+  {
+   "fillType": "PARSNIP",
+   "title": "$l10n_fillType_parsnip",
+   "english": "Parsnip",
+   "source": "base"
+  },
+  {
+   "fillType": "PEASOUP",
+   "title": "$l10n_fillType_peaSoup",
+   "english": "Pea soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "PEACH",
+   "title": "$l10n_fillType_peach",
+   "english": "Peach",
+   "source": "fed"
+  },
+  {
+   "fillType": "PEACHJAM",
+   "title": "$l10n_fillType_peachJam",
+   "english": "Peach jam",
+   "source": "fed"
+  },
+  {
+   "fillType": "PEAR",
+   "title": "$l10n_fillType_pear",
+   "english": "Pear",
+   "source": "fed"
+  },
+  {
+   "fillType": "PEARJUICE",
+   "title": "$l10n_fillType_pearJuice",
+   "english": "Pear juice",
+   "source": "fed"
+  },
+  {
+   "fillType": "PIZZA",
+   "title": "$l10n_fillType_pizza",
+   "english": "Pizza",
+   "source": "fed"
+  },
+  {
+   "fillType": "PLAICE",
+   "title": "$l10n_fillType_plaice",
+   "english": "Plaice",
+   "source": "fed"
+  },
+  {
+   "fillType": "PLAICEFILLET",
+   "title": "$l10n_fillType_plaiceFillet",
+   "english": "Plaice fillet",
+   "source": "fed"
+  },
+  {
+   "fillType": "PLUM",
+   "title": "$l10n_fillType_plum",
+   "english": "Plum",
+   "source": "fed"
+  },
+  {
+   "fillType": "PLUMJAM",
+   "title": "$l10n_fillType_plumJam",
+   "english": "Plum jam",
+   "source": "fed"
+  },
+  {
+   "fillType": "PLUMJUICE",
+   "title": "$l10n_fillType_plumJuice",
+   "english": "Plum juice",
+   "source": "fed"
+  },
+  {
+   "fillType": "POPCORN",
+   "title": "$l10n_fillType_popcorn",
+   "english": "Popcorn",
+   "source": "fed"
+  },
+  {
+   "fillType": "POPPY_OIL",
+   "title": "$l10n_fillType_poppy_oil",
+   "english": "Poppy oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "POPSICLE",
+   "title": "$l10n_fillType_popsicle",
+   "english": "Popsicle",
+   "source": "fed"
+  },
+  {
+   "fillType": "PORKMEAT",
+   "title": "$l10n_fillType_porkMeat",
+   "english": "Pork",
+   "source": "fed"
+  },
+  {
+   "fillType": "WASHEDPOTATOES",
+   "title": "$l10n_fillType_washedPotatoes",
+   "english": "Potato bags",
+   "source": "fed"
+  },
+  {
+   "fillType": "POTATOCHIPS",
+   "title": "$l10n_fillType_potatoChips",
+   "english": "Potato chips",
+   "source": "base"
+  },
+  {
+   "fillType": "POTATOPANCAKE",
+   "title": "$l10n_fillType_potatoPancake",
+   "english": "Potato pancake",
+   "source": "fed"
+  },
+  {
+   "fillType": "POTATOSALAD",
+   "title": "$l10n_fillType_potatoSalad",
+   "english": "Potato salad",
+   "source": "fed"
+  },
+  {
+   "fillType": "CHICKENMEAT",
+   "title": "$l10n_fillType_chickenMeat",
+   "english": "Poultry meat",
+   "source": "fed"
+  },
+  {
+   "fillType": "PRESERVEDBEETROOT",
+   "title": "$l10n_fillType_preservedFoodBeetRoot",
+   "english": "Preserved beetroot",
+   "source": "base"
+  },
+  {
+   "fillType": "PRESERVEDCARROTS",
+   "title": "$l10n_fillType_preservedFoodCarrots",
+   "english": "Preserved carrots",
+   "source": "base"
+  },
+  {
+   "fillType": "PRESERVEDPARSNIP",
+   "title": "$l10n_fillType_preservedFoodParsnip",
+   "english": "Preserved parsnip",
+   "source": "base"
+  },
+  {
+   "fillType": "PUMPKIN",
+   "title": "$l10n_fillType_pumpkin",
+   "english": "Pumpkin",
+   "source": "fed"
+  },
+  {
+   "fillType": "PUMPKIN_SEEDSOIL",
+   "title": "$l10n_fillType_pumpkin_seedsoil",
+   "english": "Pumpkin seed oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "PUMPKIN_SEEDS",
+   "title": "$l10n_fillType_pumpkin_seeds",
+   "english": "Pumpkin seeds",
+   "source": "fed"
+  },
+  {
+   "fillType": "PUMPKINSOUP",
+   "title": "$l10n_fillType_pumpkinSoup",
+   "english": "Pumpkin soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "QUARK",
+   "title": "$l10n_fillType_quark",
+   "english": "Quark",
+   "source": "fed"
+  },
+  {
+   "fillType": "RAISINS",
+   "title": "$l10n_fillType_raisins",
+   "english": "Raisins",
+   "source": "base"
+  },
+  {
+   "fillType": "RASPBERRY",
+   "title": "$l10n_fillType_raspBerry",
+   "english": "Raspberry",
+   "source": "fed"
+  },
+  {
+   "fillType": "RASPBERRYJAM",
+   "title": "$l10n_fillType_raspberryJam",
+   "english": "Raspberry jam",
+   "source": "fed"
+  },
+  {
+   "fillType": "RASPBERRYLIMES",
+   "title": "$l10n_fillType_raspberryLimes",
+   "english": "Raspberry lemonade",
+   "source": "fed"
+  },
+  {
+   "fillType": "READYMEAL",
+   "title": "$l10n_fillType_readymeal",
+   "english": "Ready meal",
+   "source": "fed"
+  },
+  {
+   "fillType": "REDCABBAGE",
+   "title": "$l10n_fillType_redCabbage",
+   "english": "Red cabbage",
+   "source": "fed"
+  },
+  {
+   "fillType": "REDONION",
+   "title": "$l10n_fillType_redonion",
+   "english": "Red Onion",
+   "source": "fed"
+  },
+  {
+   "fillType": "REDWINE",
+   "title": "$l10n_fillType_redWine",
+   "english": "Red wine",
+   "source": "fed"
+  },
+  {
+   "fillType": "RICE_BAGS",
+   "title": "$l10n_fillType_riceBag",
+   "english": "Rice bags",
+   "source": "base"
+  },
+  {
+   "fillType": "RICE_BOXES",
+   "title": "$l10n_fillType_riceBox",
+   "english": "Rice boxes",
+   "source": "base"
+  },
+  {
+   "fillType": "RICEFLOUR",
+   "title": "$l10n_fillType_riceFlour",
+   "english": "Rice flour",
+   "source": "base"
+  },
+  {
+   "fillType": "RICE_OIL",
+   "title": "$l10n_fillType_riceOil",
+   "english": "Rice oil",
+   "source": "base"
+  },
+  {
+   "fillType": "RICEROLLS",
+   "title": "$l10n_fillType_riceRolls",
+   "english": "Rice rolls",
+   "source": "base"
+  },
+  {
+   "fillType": "ROCKCANDIS",
+   "title": "$l10n_fillType_rockCandis",
+   "english": "Rock candy",
+   "source": "fed"
+  },
+  {
+   "fillType": "RYEFLOUR",
+   "title": "$l10n_fillType_ryeFlour",
+   "english": "Rye flour",
+   "source": "fed"
+  },
+  {
+   "fillType": "SALMON",
+   "title": "$l10n_fillType_salmon",
+   "english": "Salmon",
+   "source": "fed"
+  },
+  {
+   "fillType": "SAUSAGE",
+   "title": "$l10n_fillType_sausage",
+   "english": "Sausage",
+   "source": "fed"
+  },
+  {
+   "fillType": "SEASALT",
+   "title": "$l10n_fillType_seaSalt",
+   "english": "Sea salt",
+   "source": "fed"
+  },
+  {
+   "fillType": "SMOKED_EEL",
+   "title": "$l10n_fillType_smoked_eel",
+   "english": "Smoked eel",
+   "source": "fed"
+  },
+  {
+   "fillType": "SMOKED_SALMON",
+   "title": "$l10n_fillType_smoked_salmon",
+   "english": "Smoked salmon",
+   "source": "fed"
+  },
+  {
+   "fillType": "SMOKED_TROUT",
+   "title": "$l10n_fillType_smoked_trout",
+   "english": "Smoked trout",
+   "source": "fed"
+  },
+  {
+   "fillType": "SOUPCANSBEETROOT",
+   "title": "$l10n_fillType_soupCansBeetroot",
+   "english": "Soup cans beetroot",
+   "source": "base"
+  },
+  {
+   "fillType": "SOUPCANSCARROTS",
+   "title": "$l10n_fillType_soupCansCarrots",
+   "english": "Soup cans carrots",
+   "source": "base"
+  },
+  {
+   "fillType": "SOUPCANSMIXED",
+   "title": "$l10n_fillType_soupCansMixed",
+   "english": "Soup cans mixed",
+   "source": "base"
+  },
+  {
+   "fillType": "SOUPCANSPARSNIP",
+   "title": "$l10n_fillType_soupCansParsnip",
+   "english": "Soup cans parsnip",
+   "source": "base"
+  },
+  {
+   "fillType": "SOUPCANSPOTATO",
+   "title": "$l10n_fillType_soupCansPotato",
+   "english": "Soup cans potato",
+   "source": "base"
+  },
+  {
+   "fillType": "SOYMILK",
+   "title": "$l10n_fillType_soyMilk",
+   "english": "Soy milk",
+   "source": "fed"
+  },
+  {
+   "fillType": "SOYBEAN_OIL",
+   "title": "$l10n_fillType_SOYBEAN_OIL",
+   "english": "Soy oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "SOYSCHNITZEL",
+   "title": "$l10n_fillType_soySchnitzel",
+   "english": "Soy shreds",
+   "source": "fed"
+  },
+  {
+   "fillType": "SPAGHETTI",
+   "title": "$l10n_fillType_spaghetti",
+   "english": "Spaghetti",
+   "source": "fed"
+  },
+  {
+   "fillType": "SPELTFLOUR",
+   "title": "$l10n_fillType_speltFlour",
+   "english": "Spelt flour",
+   "source": "fed"
+  },
+  {
+   "fillType": "SPINACH_BAGS",
+   "title": "$l10n_fillType_spinachBag",
+   "english": "Spinach bags",
+   "source": "base"
+  },
+  {
+   "fillType": "SPRING_ONION",
+   "title": "$l10n_fillType_springOnion",
+   "english": "Spring onion",
+   "source": "base"
+  },
+  {
+   "fillType": "STRAWBERRY",
+   "title": "$l10n_fillType_strawberry",
+   "english": "Strawberry",
+   "source": "base"
+  },
+  {
+   "fillType": "STRAWBERRYJAM",
+   "title": "$l10n_fillType_strawberryJam",
+   "english": "Strawberry jam",
+   "source": "fed"
+  },
+  {
+   "fillType": "STRAWBERRYLIMES",
+   "title": "$l10n_fillType_strawberryLimes",
+   "english": "Strawberry lemonade",
+   "source": "fed"
+  },
+  {
+   "fillType": "SUGAR",
+   "title": "$l10n_fillType_sugar",
+   "english": "Sugar",
+   "source": "base"
+  },
+  {
+   "fillType": "SUGARCUBES",
+   "title": "$l10n_fillType_sugarCubes",
+   "english": "Sugar cubes",
+   "source": "fed"
+  },
+  {
+   "fillType": "SUNFLOWER_OIL",
+   "title": "$l10n_fillType_sunflowerOil",
+   "english": "Sunflower oil",
+   "source": "base"
+  },
+  {
+   "fillType": "TOMATO",
+   "title": "$l10n_fillType_tomato",
+   "english": "Tomato",
+   "source": "base"
+  },
+  {
+   "fillType": "TOMATOJUICE",
+   "title": "$l10n_fillType_tomatoJuice",
+   "english": "Tomato juice",
+   "source": "fed"
+  },
+  {
+   "fillType": "TOMATOSAUCE",
+   "title": "$l10n_fillType_tomatosauce",
+   "english": "Tomato sauce",
+   "source": "fed"
+  },
+  {
+   "fillType": "TOMATOSOUP",
+   "title": "$l10n_fillType_tomatoSoup",
+   "english": "Tomato soup",
+   "source": "fed"
+  },
+  {
+   "fillType": "TORTELLONI",
+   "title": "$l10n_fillType_tortelloni",
+   "english": "Tortelloni",
+   "source": "fed"
+  },
+  {
+   "fillType": "TROUT",
+   "title": "$l10n_fillType_trout",
+   "english": "Trout",
+   "source": "fed"
+  },
+  {
+   "fillType": "VEGATABLECORN",
+   "title": "$l10n_fillType_vegetableCorn",
+   "english": "Vegetable corn",
+   "source": "fed"
+  },
+  {
+   "fillType": "VINEGAR",
+   "title": "$l10n_fillType_vinegar",
+   "english": "Vinegar",
+   "source": "fed"
+  },
+  {
+   "fillType": "VODKA",
+   "title": "$l10n_fillType_vodka",
+   "english": "Vodka",
+   "source": "fed"
+  },
+  {
+   "fillType": "ICECREAM",
+   "title": "$l10n_fillType_icecream",
+   "english": "Waffle ice cream",
+   "source": "fed"
+  },
+  {
+   "fillType": "WHEATBEER_BOTTLE",
+   "title": "$l10n_fillType_wheatBeer_bottle",
+   "english": "Wheat bottled beer",
+   "source": "fed"
+  },
+  {
+   "fillType": "WHEATBEER",
+   "title": "$l10n_fillType_wheatBeer",
+   "english": "Wheat cask beer",
+   "source": "fed"
+  },
+  {
+   "fillType": "WHEATMALT",
+   "title": "$l10n_fillType_wheatMalt",
+   "english": "Wheat malt",
+   "source": "fed"
+  },
+  {
+   "fillType": "WHEY",
+   "title": "$l10n_fillType_whey",
+   "english": "Whey",
+   "source": "fed"
+  },
+  {
+   "fillType": "WHISKEY",
+   "title": "$l10n_fillType_whiskey",
+   "english": "Whiskey",
+   "source": "fed"
+  },
+  {
+   "fillType": "YEAST",
+   "title": "$l10n_fillType_yeast",
+   "english": "Yeast",
+   "source": "fed"
+  },
+  {
+   "fillType": "YOGURT",
+   "title": "$l10n_fillType_yogurt",
+   "english": "Yogurt",
+   "source": "fed"
+  }
+ ],
+ "goods": [
+  {
+   "fillType": "BALE_NET",
+   "title": "$l10n_fillType_baleNet",
+   "english": "Bale net",
+   "source": "fed"
+  },
+  {
+   "fillType": "BALE_TWINE",
+   "title": "$l10n_fillType_baleTwine",
+   "english": "Bale twine",
+   "source": "fed"
+  },
+  {
+   "fillType": "BARKMULCH",
+   "title": "$l10n_fillType_barkmulch",
+   "english": "Bark mulch",
+   "source": "fed"
+  },
+  {
+   "fillType": "BARREL",
+   "title": "$l10n_fillType_barrel",
+   "english": "Barrel",
+   "source": "base"
+  },
+  {
+   "fillType": "BATHTUB",
+   "title": "$l10n_fillType_bathtub",
+   "english": "Bathtub",
+   "source": "base"
+  },
+  {
+   "fillType": "BEEHIVE",
+   "title": "$l10n_fillType_beehive",
+   "english": "Beehive",
+   "source": "fed"
+  },
+  {
+   "fillType": "BIRDFOOD",
+   "title": "$l10n_fillType_birdFood",
+   "english": "Bird seed",
+   "source": "fed"
+  },
+  {
+   "fillType": "BOARDS",
+   "title": "$l10n_fillType_boards",
+   "english": "Boards",
+   "source": "base"
+  },
+  {
+   "fillType": "BOTTLE",
+   "title": "$l10n_fillType_bottle",
+   "english": "Bottle",
+   "source": "fed"
+  },
+  {
+   "fillType": "BUCKET",
+   "title": "$l10n_fillType_bucket",
+   "english": "Bucket",
+   "source": "base"
+  },
+  {
+   "fillType": "SIDE_PRODUCT",
+   "title": "$l10n_fillType_sideProduct",
+   "english": "By-products",
+   "source": "fed"
+  },
+  {
+   "fillType": "CARTONROLL",
+   "title": "$l10n_fillType_cartonRoll",
+   "english": "Carton roll",
+   "source": "base"
+  },
+  {
+   "fillType": "CASH",
+   "title": "$l10n_fillType_cash",
+   "english": "Cash boxes",
+   "source": "fed"
+  },
+  {
+   "fillType": "CATFOOD",
+   "title": "$l10n_fillType_catFood",
+   "english": "Cat food",
+   "source": "fed"
+  },
+  {
+   "fillType": "CEMENT",
+   "title": "$l10n_fillType_cementBags",
+   "english": "Cement bags",
+   "source": "base"
+  },
+  {
+   "fillType": "CEMENTBRICKS",
+   "title": "$l10n_fillType_cementBrick",
+   "english": "Cement bricks",
+   "source": "base"
+  },
+  {
+   "fillType": "CHARCOAL",
+   "title": "$l10n_fillType_charcoal",
+   "english": "Charcoal",
+   "source": "fed"
+  },
+  {
+   "fillType": "CLOTHES",
+   "title": "$l10n_fillType_clothes",
+   "english": "Clothes",
+   "source": "base"
+  },
+  {
+   "fillType": "CURB",
+   "title": "$l10n_fillType_curb",
+   "english": "Curb",
+   "source": "fed"
+  },
+  {
+   "fillType": "DOGFOOD",
+   "title": "$l10n_fillType_dogFood",
+   "english": "Dog food",
+   "source": "fed"
+  },
+  {
+   "fillType": "DOWN",
+   "title": "$l10n_fillType_down",
+   "english": "Down",
+   "source": "fed"
+  },
+  {
+   "fillType": "EMPTYPALLET",
+   "title": "$l10n_fillType_emptyPallet",
+   "english": "Empty pallets",
+   "source": "fed"
+  },
+  {
+   "fillType": "WOODENBOX",
+   "title": "$l10n_fillType_woodenBox",
+   "english": "Empty wooden box",
+   "source": "fed"
+  },
+  {
+   "fillType": "FABRIC",
+   "title": "$l10n_fillType_fabric",
+   "english": "Fabric",
+   "source": "base"
+  },
+  {
+   "fillType": "FERTILIZER",
+   "title": "$l10n_fillType_fertilizer",
+   "english": "Fertilizer",
+   "source": "base"
+  },
+  {
+   "fillType": "FISHFOOD",
+   "title": "$l10n_fillType_fishFood",
+   "english": "Fish food",
+   "source": "fed"
+  },
+  {
+   "fillType": "FISHMEAL",
+   "title": "$l10n_fillType_fishMeal",
+   "english": "Fish meal",
+   "source": "fed"
+  },
+  {
+   "fillType": "FLOWERPOT",
+   "title": "$l10n_fillType_flowerpot",
+   "english": "Flowerpot",
+   "source": "fed"
+  },
+  {
+   "fillType": "FURNITURE",
+   "title": "$l10n_fillType_furniture",
+   "english": "Furniture",
+   "source": "base"
+  },
+  {
+   "fillType": "GLASSPANES",
+   "title": "$l10n_fillType_glasspanes",
+   "english": "Glass pane",
+   "source": "fed"
+  },
+  {
+   "fillType": "HAYPELLETS",
+   "title": "$l10n_fillType_hayPellets",
+   "english": "Hay pellets",
+   "source": "fed"
+  },
+  {
+   "fillType": "HERBICIDE",
+   "title": "$l10n_fillType_herbicide",
+   "english": "Herbicide",
+   "source": "base"
+  },
+  {
+   "fillType": "INSULATION",
+   "title": "$l10n_fillType_insulation",
+   "english": "Insulation",
+   "source": "fed"
+  },
+  {
+   "fillType": "LAVENDER_OIL",
+   "title": "$l10n_fillType_lavender_oil",
+   "english": "Lavender oil",
+   "source": "fed"
+  },
+  {
+   "fillType": "LEATHER",
+   "title": "$l10n_fillType_leather",
+   "english": "Leather",
+   "source": "fed"
+  },
+  {
+   "fillType": "LIME",
+   "title": "$l10n_fillType_lime",
+   "english": "Lime",
+   "source": "base"
+  },
+  {
+   "fillType": "LIQUIDFERTILIZER",
+   "title": "$l10n_fillType_liquidFertilizer",
+   "english": "Liquid fertilizer",
+   "source": "base"
+  },
+  {
+   "fillType": "GLASS",
+   "title": "$l10n_fillType_glass",
+   "english": "Mason jar",
+   "source": "fed"
+  },
+  {
+   "fillType": "MINERAL_FEED",
+   "title": "$l10n_fillType_mineralFeed",
+   "english": "Mineral feed",
+   "source": "base"
+  },
+  {
+   "fillType": "EMPTYPALLET_OLD",
+   "title": "$l10n_fillType_emptyPallet_old",
+   "english": "Old empty pallets",
+   "source": "fed"
+  },
+  {
+   "fillType": "OSBPALLET",
+   "title": "$l10n_fillType_osbPallet",
+   "english": "OSB boards",
+   "source": "fed"
+  },
+  {
+   "fillType": "PAPERROLL",
+   "title": "$l10n_fillType_paperRoll",
+   "english": "Paper roll",
+   "source": "base"
+  },
+  {
+   "fillType": "PAVINGSTONE",
+   "title": "$l10n_fillType_pavingStone",
+   "english": "Paving stone",
+   "source": "fed"
+  },
+  {
+   "fillType": "PLANKS",
+   "title": "$l10n_fillType_planks",
+   "english": "Planks",
+   "source": "base"
+  },
+  {
+   "fillType": "PLYWOOD",
+   "title": "$l10n_fillType_plywood",
+   "english": "Plywood",
+   "source": "fed"
+  },
+  {
+   "fillType": "POT",
+   "title": "$l10n_fillType_pot",
+   "english": "Pot",
+   "source": "fed"
+  },
+  {
+   "fillType": "PREFABWALL",
+   "title": "$l10n_fillType_prefabWall",
+   "english": "Prefab wall",
+   "source": "base"
+  },
+  {
+   "fillType": "WASTE_PAPER",
+   "title": "$l10n_fillType_waste_paper",
+   "english": "Recycled paper",
+   "source": "fed"
+  },
+  {
+   "fillType": "PAVINGSTONE_RED",
+   "title": "$l10n_fillType_redPavingStone",
+   "english": "Red paving stone",
+   "source": "fed"
+  },
+  {
+   "fillType": "RICESAPLINGS",
+   "title": "$l10n_fillType_riceSaplings",
+   "english": "Rice saplings",
+   "source": "base"
+  },
+  {
+   "fillType": "ROADSALT",
+   "title": "$l10n_fillType_roadSalt",
+   "english": "Road salt",
+   "source": "base"
+  },
+  {
+   "fillType": "ROOFPLATES",
+   "title": "$l10n_fillType_roofPlate",
+   "english": "Roof plates",
+   "source": "base"
+  },
+  {
+   "fillType": "ROPE",
+   "title": "$l10n_fillType_rope",
+   "english": "Rope",
+   "source": "base"
+  },
+  {
+   "fillType": "SAPLINGS",
+   "title": "$l10n_fillType_Saplings",
+   "english": "Seedling field plantation",
+   "source": "fed"
+  },
+  {
+   "fillType": "SEEDS",
+   "title": "$l10n_fillType_seeds",
+   "english": "Seeds",
+   "source": "base"
+  },
+  {
+   "fillType": "SHOES",
+   "title": "$l10n_fillType_shoes",
+   "english": "Shoes",
+   "source": "fed"
+  },
+  {
+   "fillType": "SILAGE_ADDITIVE",
+   "title": "$l10n_fillType_silageAdditive",
+   "english": "Silage additive",
+   "source": "base"
+  },
+  {
+   "fillType": "STONE",
+   "title": "$l10n_fillType_stone",
+   "english": "Stone",
+   "source": "base"
+  },
+  {
+   "fillType": "STRAWHAT",
+   "title": "$l10n_fillType_strawhat",
+   "english": "Straw hat",
+   "source": "fed"
+  },
+  {
+   "fillType": "STRAWPELLETS",
+   "title": "$l10n_fillType_strawPellets",
+   "english": "Straw pellets",
+   "source": "fed"
+  },
+  {
+   "fillType": "TOILETPAPER",
+   "title": "$l10n_fillType_toiletPaper",
+   "english": "Toilet paper",
+   "source": "fed"
+  },
+  {
+   "fillType": "TURF",
+   "title": "$l10n_fillType_turf",
+   "english": "Turf",
+   "source": "fed"
+  },
+  {
+   "fillType": "OLDGLASS",
+   "title": "$l10n_fillType_oldglass",
+   "english": "Waste glass",
+   "source": "fed"
+  },
+  {
+   "fillType": "WINDOW",
+   "title": "$l10n_fillType_window",
+   "english": "Window",
+   "source": "fed"
+  },
+  {
+   "fillType": "WOODBEAM",
+   "title": "$l10n_fillType_woodBeam",
+   "english": "Wood beam",
+   "source": "base"
+  },
+  {
+   "fillType": "WOODPELLETS",
+   "title": "$l10n_fillType_woodPellets",
+   "english": "Wood pellets",
+   "source": "fed"
+  },
+  {
+   "fillType": "WOODSHOES",
+   "title": "$l10n_fillType_woodShoes",
+   "english": "Wooden shoes",
+   "source": "fed"
+  },
+  {
+   "fillType": "WOOL",
+   "title": "$l10n_fillType_wool",
+   "english": "Wool",
+   "source": "base"
+  }
+ ]
+}

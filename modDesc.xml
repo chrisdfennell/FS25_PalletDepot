@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="115">
+    <author>Fennell</author>
+    <version>1.0.0.25</version>
+
+    <title>
+        <en>Pallet Depot</en>
+        <de>Palettendepot</de>
+    </title>
+
+    <description>
+<en><![CDATA[
+A pallet hall that stores your products and sends them on: drop pallets on the unload pad at the front, then choose per product whether it stays in storage, comes out as pallets at the pickup lanes at the back, is delivered to your other productions or is sold every full hour.
+
+Two buildings, each with its own storage of up to 1,000,000 L per product:
+- Pallet Depot: Food & Drinks (green sign)
+- Pallet Depot: Textiles & Goods (blue sign)
+Both also take the products of the FedMods packs when those packs are loaded; without them they offer the base-game products.
+
+Pallets only: bulk goods, field crops and bales are not accepted.
+
+Price: 50,000 | No daily upkeep
+
+Building, textures and scripts: Fennell. Sign lettering set in Inter (SIL Open Font License).
+
+Changelog:
+1.0.0.25 - Your own pallets for every production: on the Settings page (Right Shift + P, select a production, Enter) each production with pickup lanes can spawn the game's or mod's pallets, or your own pallets of 1,000 L or 5,000 L for every product it puts on pallets (depots: every product they store). Your pallets take any product of any map or mod, and they now come out full (before, a 5,000 L depot pallet could come out with only the game pallet's amount in it).
+1.0.0.24 - Fixes: depot capacity and pallet options, production schedules and lines paused by the auto-management are kept again after the game or server restarts (they were read before the buildings had loaded), and running costs per month on the Finances page are now a whole month, not one day.
+1.0.0.23 - The three roller doors (back, left, right) open and close: stand next to a door, inside or outside, and press the door key (as on base-game garages). An open door lets you walk and drive through; the door state is saved.
+1.0.0.22 - More detailed pallet jack (tapered forks with rollers, round pump, wheels, loop handle) and workbench (steel frame, shelf, drawer cabinet, vise, toolbox, tool board with hammer, spanners, screwdrivers, saw).
+1.0.0.21 - Building: no more see-through strip at the bottom of the walls inside, the empty pallets are built like real pallets (top boards, cross boards, blocks) so leaning ones no longer look like loose boards, and a proper round fire extinguisher with hose and bracket.
+1.0.0.20 - The productions window (Right Shift + P) now works like the old Productions Manager: one table of all productions with their inputs, five per line. X inputs / outputs, C recipes, Q finances, E logistics, Backspace spawn goods, Space CSV, Esc close. On logistics: Enter changes the output, Backspace switches the recipe on / off, X schedule, C hide inactive, Q spawn goods. Enter on the first page opens the settings (auto-manage, alerts, and the depot's capacity and pallets when a depot is selected).
+1.0.0.19 - Spawn goods is exactly as in the old depot again: it opens Production Storage Control's spawn window for the selected building with the selected product chosen (Production Storage Control needed). The separate buy window was removed.
+1.0.0.18 - Own buy window for pallets (removed again in 1.0.0.19).
+1.0.0.17 - Spawn goods works like in the old depot: it always opens Production Storage Control's spawn window with the selected product chosen; Backspace spawns goods on the Stock, Productions and Finances tabs, C on every tab.
+1.0.0.16 - AutoDrive imports the depot route again when the depot is placed (it read an empty marker before and stopped with an error). Spawn goods (C) is shown again for every building with pickup lanes; with nothing to spawn it says so.
+1.0.0.15 - Removed a duplicate text entry (log warning).
+1.0.0.14 - A pallet leans against the front wall outside, next to the pallet stack.
+1.0.0.13 - Capacity per product is now up to 1,000,000 L (option per depot: 100,000 / 500,000 / 1,000,000 L). New option per depot: spawn our own depot pallets of 1,000 L or 5,000 L for any product on any map, or the game's pallets. The awning and its sign have no collision any more (crane arms pass through). More props: bench, wheelie bins, IBC tank, barrels, workbench, cabinet, pallet jack.
+1.0.0.12 - Building finished: clear aisle through the racks to the back door (front rack row split, 84 pallet places), empty pallets stacked and leaning inside and outside, waste skip at the back, yellow floor markings and rack guards, fire extinguishers, FOOD / GOODS sign inside above the back door.
+1.0.0.11 - The productions window says "productions" like the game's menu (the Lines tab is now Productions).
+1.0.0.10 - Spawn goods (C) is only offered when Production Storage Control can spawn something from that building (a product in stock that comes as pallets).
+1.0.0.9 - Spawn goods (C) is only offered when the building has something in stock.
+1.0.0.8 - Settings tab in the productions window: auto-management (pauses stuck lines so they stop costing money and restarts them when they can run) and alerts for paused/restarted lines, low inputs and nearly full outputs, per farm and shared with all players; option to hide sites without active lines.
+1.0.0.7 - Schedules: pick the months a production line runs (Lines tab, X). The server switches scheduled lines on and off each month; schedules are saved with the savegame and shared with all players.
+1.0.0.6 - New look for the productions window: buildings in a sidebar with stock bars, tabs (Q/E) for stock, lines, finances and logistics, fill bars, depot-green theme. Keys: X inputs/outputs or hide inactive, C spawn goods, Enter change output, Backspace on/off, Space CSV.
+1.0.0.5 - Productions window (Right Shift + P): all your productions with stock, lines, finances and logistics; change output, activate/deactivate, hide inactive, spawn goods, CSV export.
+1.0.0.4 - Pallets on the racks grow with the stock; daily report at 06:00; hide empty materials button (C) in the production menu; pickup lanes stack pallets two high; Price Ticker fix.
+1.0.0.3 - Two depots instead of four: Food & Drinks, and Textiles & Goods (textiles moved there). Both include the FedMods products and skip them when the Fed packs are not loaded.
+1.0.0.2 - No daily upkeep.
+1.0.0.1 - First test build: building with LODs and collisions, unload pad, pickup lanes, product lists, line names, AutoDrive route.
+]]></en>
+<de><![CDATA[
+Eine Palettenhalle, die deine Produkte lagert und weitergibt: Paletten auf der Abladefläche vorne abstellen und dann je Produkt wählen, ob es im Lager bleibt, als Paletten an den Abholspuren hinten ausgegeben, an deine anderen Produktionen geliefert oder zu jeder vollen Stunde verkauft wird.
+
+Zwei Hallen mit eigenem Lager von bis zu 1.000.000 L pro Produkt:
+- Palettendepot: Lebensmittel und Getränke (grünes Schild)
+- Palettendepot: Textilien und Waren (blaues Schild)
+Beide nehmen auch die Produkte der FedMods-Pakete an, wenn diese geladen sind; ohne sie bieten sie die Produkte des Grundspiels.
+
+Nur Paletten: Schüttgut, Feldfrüchte und Ballen werden nicht angenommen.
+
+Preis: 50.000 | Keine täglichen Unterhaltskosten
+
+Gebäude, Texturen und Skripte: Fennell. Schild-Schrift: Inter (SIL Open Font License).
+
+Changelog:
+1.0.0.25 - Eigene Paletten für jede Produktion: auf der Einstellungsseite (Rechte Umschalttaste + P, Produktion wählen, Enter) kann jede Produktion mit Abholspuren die Paletten des Spiels oder Mods ausgeben, oder eigene Paletten mit 1.000 L oder 5.000 L für jedes Produkt, das sie auf Paletten gibt (Depots: jedes gelagerte Produkt). Die eigenen Paletten nehmen jedes Produkt jeder Karte und jedes Mods und kommen jetzt voll heraus (vorher konnte eine 5.000-L-Depotpalette nur mit der Menge der Spielpalette kommen).
+1.0.0.24 - Fehlerbehebungen: Kapazitäts- und Palettenoptionen der Depots, Produktionszeitpläne und von der Automatik pausierte Linien bleiben nach einem Neustart von Spiel oder Server wieder erhalten (sie wurden gelesen, bevor die Gebäude geladen waren), und die laufenden Kosten pro Monat auf der Finanzseite gelten jetzt für einen ganzen Monat statt einen Tag.
+1.0.0.23 - Die drei Rolltore (hinten, links, rechts) lassen sich öffnen und schließen: neben dem Tor stehen, innen oder außen, und die Tor-Taste drücken (wie bei den Garagen im Grundspiel). Durch ein offenes Tor kann man gehen und fahren; der Zustand wird gespeichert.
+1.0.0.22 - Detailliertere Ameise (spitze Gabeln mit Rollen, runde Pumpe, Räder, Bügelgriff) und Werkbank (Stahlgestell, Ablage, Schubladenschrank, Schraubstock, Werkzeugkasten, Werkzeugwand mit Hammer, Schlüsseln, Schraubendrehern, Säge).
+1.0.0.21 - Gebäude: kein durchsichtiger Streifen mehr unten an den Innenwänden, die leeren Paletten sind wie echte Paletten gebaut (Deckbretter, Querbretter, Klötze), angelehnte sehen nicht mehr wie lose Bretter aus, und ein richtiger runder Feuerlöscher mit Schlauch und Halter.
+1.0.0.20 - Das Produktionsfenster (Rechte Umschalttaste + P) funktioniert jetzt wie der alte Productions Manager: eine Tabelle aller Produktionen mit ihren Eingaben, fünf pro Zeile. X Eingaben / Ausgaben, C Rezepte, Q Finanzen, E Logistik, Rücktaste Waren auslagern, Leertaste CSV, Esc schließen. In der Logistik: Enter ändert die Ausgabe, Rücktaste schaltet das Rezept ein / aus, X Zeitplan, C Inaktive ausblenden, Q Waren auslagern. Enter auf der ersten Seite öffnet die Einstellungen (Automatik, Hinweise und, wenn ein Depot gewählt ist, dessen Kapazität und Paletten).
+1.0.0.19 - Waren auslagern ist wieder genau wie im alten Depot: es öffnet das Auslagerfenster von Production Storage Control für das gewählte Gebäude mit dem gewählten Produkt (Production Storage Control nötig). Das eigene Kauffenster wurde entfernt.
+1.0.0.18 - Eigenes Kauffenster für Paletten (in 1.0.0.19 wieder entfernt).
+1.0.0.17 - Waren auslagern funktioniert wie im alten Depot: es öffnet immer das Auslagerfenster von Production Storage Control mit dem gewählten Produkt; die Rücktaste lagert auf den Reitern Bestand, Produktionen und Finanzen aus, C auf jedem Reiter.
+1.0.0.16 - AutoDrive übernimmt die Depot-Route beim Platzieren wieder (es las vorher einen leeren Marker und brach mit einem Fehler ab). Waren auslagern (C) wird wieder für jedes Gebäude mit Abholspuren gezeigt; ist nichts auszulagern, sagt es das.
+1.0.0.15 - Doppelten Texteintrag entfernt (Warnung im Log).
+1.0.0.14 - Eine Palette lehnt außen an der Vorderwand neben dem Palettenstapel.
+1.0.0.13 - Kapazität pro Produkt jetzt bis 1.000.000 L (Option je Depot: 100.000 / 500.000 / 1.000.000 L). Neue Option je Depot: eigene Depot-Paletten mit 1.000 L oder 5.000 L für jedes Produkt auf jeder Karte auslagern, oder die Paletten des Spiels. Das Vordach und sein Schild haben keine Kollision mehr (Kranarme fahren durch). Mehr Requisiten: Bank, Mülltonnen, IBC-Tank, Fässer, Werkbank, Schrank, Hubwagen.
+1.0.0.12 - Gebäude fertiggestellt: freier Gang durch die Regale zum hinteren Tor (vordere Regalreihe geteilt, 84 Palettenplätze), leere Paletten gestapelt und angelehnt innen und außen, Abfallmulde hinten, gelbe Bodenmarkierungen und Regalschutz, Feuerlöscher, Schild FOOD / GOODS innen über dem hinteren Tor.
+1.0.0.11 - Das Produktionsfenster sagt "Produktionen" wie das Spielmenü (der Reiter Linien heißt jetzt Produktionen).
+1.0.0.10 - Waren auslagern (C) wird nur angeboten, wenn Production Storage Control aus dem Gebäude etwas auslagern kann (ein Produkt auf Lager, das es als Palette gibt).
+1.0.0.9 - Waren auslagern (C) wird nur angeboten, wenn das Gebäude etwas auf Lager hat.
+1.0.0.8 - Reiter Einstellungen im Produktionsfenster: automatische Verwaltung (pausiert blockierte Linien, damit sie nichts kosten, und startet sie wieder, wenn sie laufen können) und Hinweise für pausierte/neu gestartete Linien, knappe Eingaben und fast volle Ausgaben, je Hof und für alle Spieler; Option zum Ausblenden von Standorten ohne aktive Linien.
+1.0.0.7 - Zeitpläne: Monate wählen, in denen eine Produktionslinie läuft (Reiter Linien, X). Der Server schaltet geplante Linien jeden Monat an und aus; Zeitpläne werden mit dem Spielstand gespeichert und mit allen Spielern geteilt.
+1.0.0.6 - Neues Aussehen des Produktionsfensters: Gebäude in einer Seitenleiste mit Füllbalken, Reiter (Q/E) für Bestand, Linien, Finanzen und Logistik, Füllbalken, Depot-Grün. Tasten: X Ein-/Ausgaben bzw. Inaktive ausblenden, C Waren auslagern, Enter Ausgabe ändern, Rücktaste an/aus, Leertaste CSV.
+1.0.0.5 - Produktionsfenster (Rechte Umschalttaste + P): alle deine Produktionen mit Bestand, Linien, Finanzen und Logistik; Ausgabe ändern, aktivieren/deaktivieren, Inaktive ausblenden, Waren auslagern, CSV-Export.
+1.0.0.4 - Paletten in den Regalen wachsen mit dem Bestand; Tagesbericht um 06:00; Taste (C) zum Ausblenden leerer Materialien im Produktionsmenü; Abholspuren stapeln Paletten zweifach; Korrektur für Price Ticker.
+1.0.0.3 - Zwei Depots statt vier: Lebensmittel und Getränke sowie Textilien und Waren (Textilien dorthin verschoben). Beide enthalten die FedMods-Produkte und lassen sie aus, wenn die Fed-Pakete nicht geladen sind.
+1.0.0.2 - Keine täglichen Unterhaltskosten mehr.
+1.0.0.1 - Erster Test-Build: Gebäude mit LODs und Kollisionen, Abladefläche, Abholspuren, Produktlisten, Zeilennamen, AutoDrive-Route.
+]]></de>
+    </description>
+
+    <iconFilename>icon_palletDepot.dds</iconFilename>
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="scripts/PalletDepot.lua"/>
+        <sourceFile filename="scripts/PalletDepotLineNames.lua"/>
+        <sourceFile filename="scripts/PalletDepotOptionalProducts.lua"/>
+        <sourceFile filename="scripts/PalletDepotStock.lua"/>
+        <sourceFile filename="scripts/PalletDepotReport.lua"/>
+        <sourceFile filename="scripts/PalletDepotHideEmpty.lua"/>
+        <sourceFile filename="scripts/PalletDepotPriceTicker.lua"/>
+        <sourceFile filename="scripts/PalletDepotSchedules.lua"/>
+        <sourceFile filename="scripts/PalletDepotScheduleDialog.lua"/>
+        <sourceFile filename="scripts/PalletDepotAutoManager.lua"/>
+        <sourceFile filename="scripts/PalletDepotPallets.lua"/>
+        <sourceFile filename="scripts/PalletDepotOptions.lua"/>
+        <sourceFile filename="scripts/PalletDepotOverview.lua"/>
+    </extraSourceFiles>
+
+    <actions>
+        <action name="PALLET_DEPOT_OVERVIEW" category="SYSTEM"/>
+    </actions>
+    <inputBinding>
+        <actionBinding action="PALLET_DEPOT_OVERVIEW">
+            <binding device="KB_MOUSE_DEFAULT" input="KEY_rshift KEY_p"/>
+        </actionBinding>
+    </inputBinding>
+
+    <storeItems>
+        <storeItem xmlFilename="placeables/depot_food.xml"/>
+        <storeItem xmlFilename="placeables/depot_goods.xml"/>
+        <storeItem xmlFilename="vehicles/depotPallet1000.xml"/>
+        <storeItem xmlFilename="vehicles/depotPallet5000.xml"/>
+    </storeItems>
+
+    <l10n>
+        <text name="shopItem_depotFood"><en>Pallet Depot: Food &amp; Drinks</en><de>Palettendepot: Lebensmittel und Getränke</de></text>
+        <text name="shopItem_depotGoods"><en>Pallet Depot: Textiles &amp; Goods</en><de>Palettendepot: Textilien und Waren</de></text>
+        <text name="function_palletDepot"><en>Stores pallets and sends them on: to pickup, to your productions or to sale</en><de>Lagert Paletten und gibt sie weiter: zur Abholung, an deine Produktionen oder in den Verkauf</de></text>
+        <text name="depot_report"><en>%s: %s in, %s out as pallets, %s distributed, %s sold.</en><de>%s: %s eingelagert, %s als Paletten ausgelagert, %s verteilt, %s verkauft.</de></text>
+        <text name="depot_reportTop"><en>Most delivered: %s (%s).</en><de>Meist geliefert: %s (%s).</de></text>
+        <text name="depot_hideMaterials"><en>Hide empty materials</en><de>Leere Materialien ausblenden</de></text>
+        <text name="depot_showMaterials"><en>Show all materials</en><de>Alle Materialien anzeigen</de></text>
+        <text name="pdo_exportDone"><en>Exported to:
+%s</en><de>Exportiert nach:
+%s</de></text>
+        <text name="pdo_brand"><en>Pallet Depot</en><de>Palettendepot</de></text>
+        <text name="pdo_title"><en>Productions</en><de>Produktionen</de></text>
+        <text name="pdo_summary"><en>%d sites · %d / %d productions running</en><de>%d Standorte · %d / %d Produktionen aktiv</de></text>
+        <text name="pdo_sites"><en>Sites</en><de>Standorte</de></text>
+        <text name="pdo_noSites"><en>No productions</en><de>Keine Produktionen</de></text>
+        <text name="pdo_detailInfo"><en>%d / %d productions running · %s full</en><de>%d / %d Produktionen aktiv · %s belegt</de></text>
+        <text name="pdo_tabStock"><en>Stock</en><de>Bestand</de></text>
+        <text name="pdo_tabRecipes"><en>Recipes</en><de>Rezepte</de></text>
+        <text name="pdo_hbName"><en>Name</en><de>Name</de></text>
+        <text name="pdo_hbRecipe"><en>Recipe</en><de>Rezept</de></text>
+        <text name="pdo_btnShowRecipes"><en>Show recipes</en><de>Rezepte anzeigen</de></text>
+        <text name="pdo_btnShowFillTypes"><en>Show fill types</en><de>Füllarten anzeigen</de></text>
+        <text name="pdo_btnShowFinances"><en>Show finances</en><de>Finanzen anzeigen</de></text>
+        <text name="pdo_btnHideFinances"><en>Hide finances</en><de>Finanzen ausblenden</de></text>
+        <text name="pdo_btnShowLogistics"><en>Show logistics</en><de>Logistik anzeigen</de></text>
+        <text name="pdo_btnHideLogistics"><en>Hide logistics</en><de>Logistik ausblenden</de></text>
+        <text name="pdo_btnSettings"><en>Settings</en><de>Einstellungen</de></text>
+        <text name="pdo_btnBack"><en>Back</en><de>Zurück</de></text>
+        <text name="pdo_hbInputs"><en>Inputs</en><de>Eingaben</de></text>
+        <text name="pdo_hbOutputs"><en>Outputs</en><de>Ausgaben</de></text>
+        <text name="pdo_tabLines"><en>Productions</en><de>Produktionen</de></text>
+        <text name="pdo_tabFinances"><en>Finances</en><de>Finanzen</de></text>
+        <text name="pdo_tabLogistics"><en>Logistics</en><de>Logistik</de></text>
+        <text name="pdo_hbProduct"><en>Product</en><de>Produkt</de></text>
+        <text name="pdo_hbFill"><en>Fill</en><de>Füllung</de></text>
+        <text name="pdo_hbStored"><en>Stored</en><de>Gelagert</de></text>
+        <text name="pdo_hbShare"><en>Share</en><de>Anteil</de></text>
+        <text name="pdo_hbLine"><en>Production</en><de>Produktion</de></text>
+        <text name="pdo_hbIngredients"><en>Ingredients</en><de>Zutaten</de></text>
+        <text name="pdo_hbStatus"><en>Status</en><de>Status</de></text>
+        <text name="pdo_hbItem"><en>Item</en><de>Posten</de></text>
+        <text name="pdo_hbPrice"><en>Price / 1000 L</en><de>Preis / 1000 L</de></text>
+        <text name="pdo_hbValue"><en>Value</en><de>Wert</de></text>
+        <text name="pdo_hbStock"><en>Stock</en><de>Bestand</de></text>
+        <text name="pdo_hbSupply"><en>Supply</en><de>Vorrat</de></text>
+        <text name="pdo_hbOutput"><en>Output</en><de>Ausgabe</de></text>
+        <text name="pdo_hbDestination"><en>Destination</en><de>Ziel</de></text>
+        <text name="pdo_finStockValue"><en>Stock value</en><de>Lagerwert</de></text>
+        <text name="pdo_finCosts"><en>Running costs</en><de>Laufende Kosten</de></text>
+        <text name="pdo_finNet"><en>Net</en><de>Netto</de></text>
+        <text name="pdo_perMonth"><en> / month</en><de> / Monat</de></text>
+        <text name="pdo_nothingStored"><en>Nothing in stock</en><de>Nichts auf Lager</de></text>
+        <text name="pdo_btnShowOutputs"><en>Show outputs</en><de>Ausgaben anzeigen</de></text>
+        <text name="pdo_btnShowInputs"><en>Show inputs</en><de>Eingaben anzeigen</de></text>
+        <text name="pdo_btnChangeOutput"><en>Change output</en><de>Ausgabe ändern</de></text>
+        <text name="pdo_btnActivate"><en>Activate</en><de>Aktivieren</de></text>
+        <text name="pdo_btnDeactivate"><en>Deactivate</en><de>Deaktivieren</de></text>
+        <text name="pdo_btnHideInactive"><en>Hide inactive</en><de>Inaktive ausblenden</de></text>
+        <text name="pdo_btnShowInactive"><en>Show inactive</en><de>Inaktive anzeigen</de></text>
+        <text name="pdo_btnSpawnGoods"><en>Spawn goods</en><de>Waren auslagern</de></text>
+        <text name="pdo_btnExportCSV"><en>Export CSV</en><de>CSV exportieren</de></text>
+        <text name="pdo_btnClose"><en>Close</en><de>Schließen</de></text>
+        <text name="pdo_statusActive"><en>Active</en><de>Aktiv</de></text>
+        <text name="pdo_statusInactive"><en>Inactive</en><de>Inaktiv</de></text>
+        <text name="pdo_statusFull"><en>Full</en><de>Voll</de></text>
+        <text name="pdo_outputStoring"><en>Storing</en><de>Lagern</de></text>
+        <text name="pdo_outputSpawning"><en>Spawning</en><de>Auslagern</de></text>
+        <text name="pdo_outputDistributing"><en>Distributing</en><de>Verteilen</de></text>
+        <text name="pdo_outputSelling"><en>Selling</en><de>Verkaufen</de></text>
+        <text name="pdo_destinationNotSet"><en>Not set</en><de>Nicht gesetzt</de></text>
+        <text name="pdo_destinationFull"><en>Full</en><de>Voll</de></text>
+        <text name="pdo_noRecipes"><en>No productions with stock</en><de>Keine Produktionen mit Bestand</de></text>
+        <text name="pdo_noActiveRecipes"><en>No active productions</en><de>Keine aktiven Produktionen</de></text>
+        <text name="pdo_noPermission"><en>You are not allowed to manage productions on this farm.</en><de>Du darfst die Produktionen dieses Hofs nicht verwalten.</de></text>
+        <text name="pdo_noOutput"><en>This production has no output.</en><de>Diese Produktion hat keine Ausgabe.</de></text>
+        <text name="pdo_exportNothing"><en>No production data to export.</en><de>Keine Produktionsdaten zum Exportieren.</de></text>
+        <text name="pdo_exportFailed"><en>Export failed.</en><de>Export fehlgeschlagen.</de></text>
+        <text name="pdo_hbSchedule"><en>Schedule</en><de>Zeitplan</de></text>
+        <text name="pdo_btnSchedule"><en>Schedule</en><de>Zeitplan</de></text>
+        <text name="pdo_scheduleBrand"><en>Schedule</en><de>Zeitplan</de></text>
+        <text name="pdo_scheduleState"><en>Schedule</en><de>Zeitplan</de></text>
+        <text name="pdo_scheduleActive"><en>Active</en><de>Aktiv</de></text>
+        <text name="pdo_scheduleNoMonths"><en>No months selected</en><de>Keine Monate gewählt</de></text>
+        <text name="pdo_schedulePaused"><en>Paused</en><de>Pausiert</de></text>
+        <text name="pdo_scheduleNow"><en>now</en><de>jetzt</de></text>
+        <text name="pdo_scheduleRuns"><en>Runs</en><de>Läuft</de></text>
+        <text name="pdo_scheduleOff"><en>Off</en><de>Aus</de></text>
+        <text name="pdo_btnToggleMonth"><en>Switch month</en><de>Monat umschalten</de></text>
+        <text name="pdo_btnAllMonthsOn"><en>All months on</en><de>Alle Monate an</de></text>
+        <text name="pdo_btnAllMonthsOff"><en>All months off</en><de>Alle Monate aus</de></text>
+        <text name="pdo_btnScheduleOff"><en>Pause schedule</en><de>Zeitplan pausieren</de></text>
+        <text name="pdo_btnScheduleOn"><en>Activate schedule</en><de>Zeitplan aktivieren</de></text>
+        <text name="pdo_btnSave"><en>Save</en><de>Speichern</de></text>
+        <text name="pdo_btnCancel"><en>Cancel</en><de>Abbrechen</de></text>
+        <text name="pdo_month1"><en>March</en><de>März</de></text>
+        <text name="pdo_month2"><en>April</en><de>April</de></text>
+        <text name="pdo_month3"><en>May</en><de>Mai</de></text>
+        <text name="pdo_month4"><en>June</en><de>Juni</de></text>
+        <text name="pdo_month5"><en>July</en><de>Juli</de></text>
+        <text name="pdo_month6"><en>August</en><de>August</de></text>
+        <text name="pdo_month7"><en>September</en><de>September</de></text>
+        <text name="pdo_month8"><en>October</en><de>Oktober</de></text>
+        <text name="pdo_month9"><en>November</en><de>November</de></text>
+        <text name="pdo_month10"><en>December</en><de>Dezember</de></text>
+        <text name="pdo_month11"><en>January</en><de>Januar</de></text>
+        <text name="pdo_month12"><en>February</en><de>Februar</de></text>
+        <text name="pdo_tabSettings"><en>Settings</en><de>Einstellungen</de></text>
+        <text name="pdo_settingsInfo"><en>Enter changes the selected setting</en><de>Enter ändert die gewählte Einstellung</de></text>
+        <text name="pdo_hbSetting"><en>Setting</en><de>Einstellung</de></text>
+        <text name="pdo_hbDescription"><en>What it does</en><de>Wirkung</de></text>
+        <text name="pdo_btnChangeSetting"><en>Change</en><de>Ändern</de></text>
+        <text name="pdo_on"><en>On</en><de>An</de></text>
+        <text name="pdo_off"><en>Off</en><de>Aus</de></text>
+        <text name="pdo_setSectionFarm"><en>Your farm (saved with the savegame, for all players of the farm)</en><de>Dein Hof (im Spielstand gespeichert, für alle Spieler des Hofs)</de></text>
+        <text name="pdo_setSectionPersonal"><en>Only for you</en><de>Nur für dich</de></text>
+        <text name="pdo_setAutoManage"><en>Auto-management</en><de>Automatische Verwaltung</de></text>
+        <text name="pdo_setAutoManageDesc"><en>Pauses productions that are stuck (no inputs or output full) and restarts them when they can run</en><de>Pausiert blockierte Produktionen (keine Eingaben oder Ausgabe voll) und startet sie wieder, wenn sie laufen können</de></text>
+        <text name="pdo_setNotifyControl"><en>Alert: paused / restarted</en><de>Hinweis: pausiert / neu gestartet</de></text>
+        <text name="pdo_setNotifyControlDesc"><en>Tells you when the auto-management pauses or restarts a production</en><de>Meldet, wenn die automatische Verwaltung eine Produktion pausiert oder neu startet</de></text>
+        <text name="pdo_setNotifyLow"><en>Alert: low inputs</en><de>Hinweis: wenig Eingaben</de></text>
+        <text name="pdo_setNotifyLowDesc"><en>Tells you when an input of a running production falls below the low threshold</en><de>Meldet, wenn eine Eingabe einer laufenden Produktion unter die untere Schwelle fällt</de></text>
+        <text name="pdo_setNotifyHigh"><en>Alert: output nearly full</en><de>Hinweis: Ausgabe fast voll</de></text>
+        <text name="pdo_setNotifyHighDesc"><en>Tells you when an output of a running production reaches the high threshold</en><de>Meldet, wenn eine Ausgabe einer laufenden Produktion die obere Schwelle erreicht</de></text>
+        <text name="pdo_setLowThreshold"><en>Low threshold</en><de>Untere Schwelle</de></text>
+        <text name="pdo_setLowThresholdDesc"><en>Fill level below which an input counts as low</en><de>Füllstand, unter dem eine Eingabe als knapp gilt</de></text>
+        <text name="pdo_setHighThreshold"><en>High threshold</en><de>Obere Schwelle</de></text>
+        <text name="pdo_setHighThresholdDesc"><en>Fill level from which an output counts as nearly full; paused productions restart below it</en><de>Füllstand, ab dem eine Ausgabe als fast voll gilt; pausierte Produktionen starten darunter wieder</de></text>
+        <text name="pdo_setHideInactive"><en>Hide sites without active productions</en><de>Standorte ohne aktive Produktionen ausblenden</de></text>
+        <text name="pdo_setHideInactiveDesc"><en>Leaves buildings whose productions are all off out of the list</en><de>Lässt Gebäude, deren Produktionen alle aus sind, in der Liste weg</de></text>
+        <text name="pdo_alertPausedInputs"><en>%s at %s paused: out of inputs.</en><de>%s in %s pausiert: keine Eingaben mehr.</de></text>
+        <text name="pdo_alertPausedOutput"><en>%s at %s paused: output storage full.</en><de>%s in %s pausiert: Ausgabelager voll.</de></text>
+        <text name="pdo_alertResumed"><en>%s at %s restarted.</en><de>%s in %s neu gestartet.</de></text>
+        <text name="pdo_alertLowInputs"><en>%s at %s: running low on %s.</en><de>%s in %s: %s wird knapp.</de></text>
+        <text name="pdo_alertHighOutputs"><en>%s at %s: %s nearly full.</en><de>%s in %s: %s fast voll.</de></text>
+        <text name="pdo_setSectionDepot"><en>This depot: %s (saved with the savegame)</en><de>Dieses Depot: %s (im Spielstand gespeichert)</de></text>
+        <text name="pdo_setCapacity"><en>Capacity per product</en><de>Kapazität pro Produkt</de></text>
+        <text name="pdo_setCapacityDesc"><en>How much of each product this depot stores; stock above a lowered limit is kept</en><de>Wie viel jedes Produkts dieses Depot lagert; Bestand über einer gesenkten Grenze bleibt erhalten</de></text>
+        <text name="pdo_setSectionProduction"><en>This production: %s (saved with the savegame)</en><de>Diese Produktion: %s (im Spielstand gespeichert)</de></text>
+        <text name="pdo_setPallet"><en>Pallets it spawns</en><de>Ausgegebene Paletten</de></text>
+        <text name="pdo_setPalletDesc"><en>The game's or mod's pallet of each product, or your own pallets of 1,000 or 5,000 L for every product; a pallet comes out once it can be filled</en><de>Die Palette des Spiels oder Mods für jedes Produkt, oder eigene Paletten mit 1.000 oder 5.000 L für jedes Produkt; eine Palette kommt, sobald sie voll gemacht werden kann</de></text>
+        <text name="pdo_palletGame"><en>Game / mod pallets</en><de>Spiel- / Mod-Paletten</de></text>
+        <text name="pdo_palletDepot"><en>Own pallets %s L</en><de>Eigene Paletten %s L</de></text>
+        <text name="storeItem_depotPallet1000"><en>Own pallet (1,000 L)</en><de>Eigene Palette (1.000 L)</de></text>
+        <text name="storeItem_depotPallet5000"><en>Own pallet (5,000 L)</en><de>Eigene Palette (5.000 L)</de></text>
+        <text name="input_PALLET_DEPOT_OVERVIEW"><en>Pallet Depot: productions</en><de>Palettendepot: Produktionen</de></text>
+        <text name="depot_productLine"><en>Stored product</en><de>Lagerprodukt</de></text>
+    </l10n>
+</modDesc>

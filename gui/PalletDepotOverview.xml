@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- Pallet Depot productions window (scripts/PalletDepotOverview.lua): title bar with summary, page strip, one table of all
+     the farm's productions. Columns are placed per page in Lua, measured against the 100 px reference cell "pxRef". -->
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg"/>
+    <GuiElement profile="fs25_dialogBg" id="dialogElement" size="1760px 880px">
+        <Bitmap profile="pdWindow" size="1760px 880px"/>
+
+        <!-- title bar -->
+        <Bitmap profile="pdTitleBar" size="1760px 72px">
+            <Text profile="pdBrand" position="28px -14px" size="400px 26px" text="$l10n_pdo_brand"/>
+            <Text profile="pdTitle" position="28px -38px" size="600px 26px" id="titleText"/>
+            <Text profile="pdSummary" position="-28px -24px" size="800px 26px" id="summaryText"/>
+        </Bitmap>
+        <Bitmap profile="pdAccent" position="0px -72px" size="1760px 3px"/>
+
+        <!-- page strip: shows the page the keys below have opened; a click opens it too -->
+        <Button profile="pdTab" position="28px -88px" size="220px 36px" id="page1" onClick="onClickPage1" text="$l10n_pdo_tabLines"/>
+        <Button profile="pdTab" position="253px -88px" size="220px 36px" id="page2" onClick="onClickPage2" text="$l10n_pdo_tabRecipes"/>
+        <Button profile="pdTab" position="478px -88px" size="220px 36px" id="page3" onClick="onClickPage3" text="$l10n_pdo_tabFinances"/>
+        <Button profile="pdTab" position="703px -88px" size="220px 36px" id="page4" onClick="onClickPage4" text="$l10n_pdo_tabLogistics"/>
+        <Button profile="pdTab" position="928px -88px" size="220px 36px" id="page5" onClick="onClickPage5" text="$l10n_pdo_tabSettings"/>
+        <Bitmap profile="pdAccent" position="28px -124px" size="220px 3px" id="pageUnderline"/>
+
+        <!-- the table -->
+        <Bitmap profile="pdPanel" position="24px -140px" size="1712px 650px">
+            <Bitmap profile="pdHeaderLine" position="0px 0px" size="1712px 34px">
+                <Text profile="pdHeaderText" position="20px 0px" size="270px 34px" id="headerName"/>
+                <Text profile="pdHeaderText" position="300px 0px" size="100px 34px" id="header1"/>
+                <Text profile="pdHeaderText" position="400px 0px" size="100px 34px" id="header2"/>
+                <Text profile="pdHeaderText" position="500px 0px" size="100px 34px" id="header3"/>
+                <Text profile="pdHeaderText" position="600px 0px" size="100px 34px" id="header4"/>
+                <Text profile="pdHeaderText" position="700px 0px" size="100px 34px" id="header5"/>
+                <Text profile="pdHeaderText" position="800px 0px" size="100px 34px" id="headerStatus"/>
+                <Text profile="pdHeaderText" position="0px 0px" size="100px 34px" id="pxRef" visible="false"/>
+            </Bitmap>
+            <SmoothList profile="pdList" id="table" position="6px -40px" size="1694px 604px" focusInit="onOpen">
+                <ListItem profile="pdDetailItem" name="rowTemplate" size="1694px 36px">
+                    <Text profile="pdCellStatus" position="14px 0px" size="276px 36px" name="name" textLayoutMode="scrolling"/>
+                    <Bitmap profile="pdIcon" position="300px -9px" name="icon1"/>
+                    <Text profile="pdCell" position="324px 0px" size="100px 36px" name="text1"/>
+                    <Bitmap profile="pdIcon" position="300px -9px" name="icon2"/>
+                    <Text profile="pdCell" position="324px 0px" size="100px 36px" name="text2"/>
+                    <Bitmap profile="pdIcon" position="300px -9px" name="icon3"/>
+                    <Text profile="pdCell" position="324px 0px" size="100px 36px" name="text3"/>
+                    <Bitmap profile="pdIcon" position="300px -9px" name="icon4"/>
+                    <Text profile="pdCell" position="324px 0px" size="100px 36px" name="text4"/>
+                    <Bitmap profile="pdIcon" position="300px -9px" name="icon5"/>
+                    <Text profile="pdCell" position="324px 0px" size="100px 36px" name="text5"/>
+                    <Text profile="pdCellStatus" position="1590px 0px" size="100px 36px" name="status"/>
+                </ListItem>
+            </SmoothList>
+            <ThreePartBitmap profile="fs25_listSliderBox" position="-4px -40px" size="12px 604px" with="anchorTopRight">
+                <Slider profile="fs25_listSlider" size="6px 596px" dataElementId="table"/>
+            </ThreePartBitmap>
+        </Bitmap>
+
+        <!-- keys as in the old Productions Manager; which buttons show is set per page in Lua -->
+        <BoxLayout profile="fs25_dialogButtonBox" size="1712px 60px" id="buttonBox">
+            <Button profile="buttonOK" text="$l10n_pdo_btnShowOutputs" onClick="onClickToggleInputs" id="toggleButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnSchedule" onClick="onClickSchedule" id="scheduleButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnShowRecipes" onClick="onClickRecipes" id="recipeButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnHideInactive" onClick="onClickHideInactive" id="inactiveButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnShowFinances" onClick="onClickFinances" id="financesButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnChangeOutput" onClick="onClickChangeOutput" id="changeOutputButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnSettings" onClick="onClickSettings" id="settingsButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnChangeSetting" onClick="onClickChangeSetting" id="changeSettingButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnActivate" onClick="onClickActivate" id="activateButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnSpawnGoods" onClick="onClickSpawnGoods" id="spawnButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnBack" onClick="onClickSettingsBack" id="backButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnShowLogistics" onClick="onClickLogistics" id="logisticsButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnExportCSV" onClick="onClickExport" id="exportButton"/>
+            <Button profile="buttonBack" text="$l10n_pdo_btnClose" onClick="onClickBack" id="closeButton"/>
+        </BoxLayout>
+    </GuiElement>
+</GUI>

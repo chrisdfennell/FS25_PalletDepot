@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- Pallet Depot productions window: dark charcoal panels with the depot's green as the accent.
+     baseReference draws a solid colour block in its imageColor. -->
+<GUIProfiles>
+    <Presets>
+        <Preset name="pdGreen" value="0.18 0.55 0.24 1"/>
+        <Preset name="pdGreenSoft" value="0.18 0.55 0.24 0.35"/>
+        <Preset name="pdWindow" value="0.045 0.05 0.05 0.97"/>
+        <Preset name="pdTitleBar" value="0.075 0.085 0.08 1"/>
+        <Preset name="pdPanel" value="0.08 0.09 0.088 1"/>
+        <Preset name="pdRow" value="0.1 0.11 0.105 1"/>
+        <Preset name="pdRowAlt" value="0.085 0.095 0.09 1"/>
+        <Preset name="pdBarBg" value="0.2 0.22 0.21 1"/>
+        <Preset name="pdText" value="0.92 0.94 0.92 1"/>
+        <Preset name="pdTextDim" value="0.6 0.64 0.61 1"/>
+    </Presets>
+
+    <!-- blocks -->
+    <Profile name="pdBlock" extends="baseReference" with="anchorTopLeft pivotTopLeft">
+        <imageColor value="0 0 0 0"/>
+    </Profile>
+    <Profile name="pdWindow" extends="pdBlock">
+        <imageColor value="$preset_pdWindow"/>
+    </Profile>
+    <Profile name="pdTitleBar" extends="pdBlock">
+        <imageColor value="$preset_pdTitleBar"/>
+    </Profile>
+    <Profile name="pdAccent" extends="pdBlock">
+        <imageColor value="$preset_pdGreen"/>
+    </Profile>
+    <Profile name="pdPanel" extends="pdBlock">
+        <imageColor value="$preset_pdPanel"/>
+    </Profile>
+    <Profile name="pdHeaderLine" extends="pdBlock">
+        <imageColor value="$preset_pdTitleBar"/>
+    </Profile>
+    <Profile name="pdList" extends="emptyPanel" with="anchorTopLeft pivotTopLeft">
+    </Profile>
+
+    <!-- texts -->
+    <Profile name="pdText" extends="pdBlock">
+        <textSize value="15px"/>
+        <textBold value="false"/>
+        <textAlignment value="left"/>
+        <textVerticalAlignment value="middle"/>
+        <textColor value="$preset_pdText"/>
+        <textSelectedColor value="$preset_pdText"/>
+        <textHighlightedColor value="$preset_pdText"/>
+        <textDisabledColor value="$preset_colorDisabled"/>
+    </Profile>
+    <Profile name="pdBrand" extends="pdText">
+        <textSize value="13px"/>
+        <textBold value="true"/>
+        <textUpperCase value="true"/>
+        <textColor value="$preset_pdGreen"/>
+    </Profile>
+    <Profile name="pdTitle" extends="pdText">
+        <textSize value="24px"/>
+        <textBold value="true"/>
+    </Profile>
+    <Profile name="pdSummary" extends="pdText" with="anchorTopRight pivotTopRight">
+        <textSize value="16px"/>
+        <textAlignment value="right"/>
+        <textColor value="$preset_pdTextDim"/>
+    </Profile>
+    <Profile name="pdHeaderText" extends="pdText">
+        <textSize value="13px"/>
+        <textBold value="true"/>
+        <textUpperCase value="true"/>
+        <textColor value="$preset_pdTextDim"/>
+    </Profile>
+    <Profile name="pdDetailTitle" extends="pdText">
+        <textSize value="22px"/>
+        <textBold value="true"/>
+        <textUpperCase value="true"/>
+    </Profile>
+    <Profile name="pdDetailInfo" extends="pdSummary">
+        <textSize value="15px"/>
+    </Profile>
+    <Profile name="pdTabHint" extends="pdText">
+        <textSize value="14px"/>
+        <textBold value="true"/>
+        <textAlignment value="center"/>
+        <textColor value="$preset_pdTextDim"/>
+    </Profile>
+
+    <!-- tabs: plain clickable labels, the active one gets the green underline -->
+    <Profile name="pdTab" extends="pdText">
+        <textSize value="16px"/>
+        <textBold value="true"/>
+        <textUpperCase value="true"/>
+        <textAlignment value="center"/>
+        <textColor value="$preset_pdTextDim"/>
+        <textFocusedColor value="$preset_pdText"/>
+        <textHighlightedColor value="$preset_pdText"/>
+        <imageColor value="0 0 0 0"/>
+        <imageFocusedColor value="$preset_pdGreenSoft"/>
+        <imageHighlightedColor value="$preset_pdGreenSoft"/>
+    </Profile>
+
+    <!-- sidebar rows -->
+    <Profile name="pdSiteItem" extends="baseReference" with="anchorTopStretchingX">
+        <height value="64px"/>
+        <imageColor value="$preset_pdRow"/>
+        <imageSelectedColor value="$preset_pdGreen"/>
+        <imageHighlightedColor value="$preset_pdGreenSoft"/>
+    </Profile>
+    <Profile name="pdSiteName" extends="pdText">
+        <textSize value="16px"/>
+        <textBold value="true"/>
+    </Profile>
+    <Profile name="pdSiteInfo" extends="pdText" with="anchorTopRight pivotTopRight">
+        <textSize value="14px"/>
+        <textAlignment value="right"/>
+    </Profile>
+    <Profile name="pdSiteAlert" extends="pdSiteInfo">
+        <textSize value="18px"/>
+        <textBold value="true"/>
+    </Profile>
+
+    <!-- detail rows -->
+    <Profile name="pdDetailItem" extends="baseReference" with="anchorTopStretchingX alternating">
+        <height value="36px"/>
+        <imageColor value="$preset_pdRow"/>
+        <alternateBackgroundColor value="$preset_pdRowAlt"/>
+        <imageSelectedColor value="$preset_pdGreen"/>
+        <imageHighlightedColor value="$preset_pdGreenSoft"/>
+    </Profile>
+    <Profile name="pdCell" extends="pdText">
+        <textSize value="14px"/>
+    </Profile>
+    <Profile name="pdCellStatus" extends="pdCell">
+        <textBold value="true"/>
+    </Profile>
+    <Profile name="pdIcon" extends="pdBlock">
+        <size value="18px 18px"/>
+        <imageColor value="1 1 1 1"/>
+        <imageSliceId value="noSlice"/>
+    </Profile>
+
+    <!-- fill bars: the fill is resized in Lua -->
+    <Profile name="pdBarBg" extends="pdBlock">
+        <imageColor value="$preset_pdBarBg"/>
+    </Profile>
+    <Profile name="pdBarFill" extends="pdBlock">
+        <imageColor value="$preset_pdGreen"/>
+    </Profile>
+</GUIProfiles>

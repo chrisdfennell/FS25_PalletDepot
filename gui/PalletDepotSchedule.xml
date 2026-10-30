@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!-- Pallet Depot schedule editor (scripts/PalletDepotScheduleDialog.lua), opened over the productions window.
+     Uses the styles of gui/PalletDepotOverviewProfiles.xml. -->
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <Bitmap profile="dialogFullscreenBg" id="dialogBg"/>
+    <GuiElement profile="fs25_dialogBg" id="dialogElement" size="760px 800px">
+        <Bitmap profile="pdWindow" size="760px 800px"/>
+
+        <Bitmap profile="pdTitleBar" size="760px 96px">
+            <Text profile="pdBrand" position="28px -14px" size="400px 26px" text="$l10n_pdo_scheduleBrand"/>
+            <Text profile="pdTitle" position="28px -38px" size="700px 26px" id="titleText"/>
+            <Text profile="pdHeaderText" position="28px -66px" size="700px 22px" id="subtitleText"/>
+        </Bitmap>
+        <Bitmap profile="pdAccent" position="0px -96px" size="760px 3px"/>
+
+        <Bitmap profile="pdPanel" position="24px -114px" size="712px 56px">
+            <Text profile="pdSiteName" position="18px -16px" size="400px 26px" text="$l10n_pdo_scheduleState"/>
+            <Text profile="pdSiteAlert" position="-18px -16px" size="300px 26px" id="stateText"/>
+        </Bitmap>
+
+        <Bitmap profile="pdPanel" position="24px -184px" size="712px 532px">
+            <SmoothList profile="pdList" id="monthList" position="6px -6px" size="700px 520px" focusInit="onOpen">
+                <ListItem profile="pdDetailItem" name="monthTemplate" size="700px 43px">
+                    <Text profile="pdSiteName" position="18px 0px" size="300px 43px" name="month"/>
+                    <Text profile="pdCell" position="330px 0px" size="120px 43px" name="now"/>
+                    <Bitmap profile="pdBarBg" position="470px -15px" size="90px 13px" name="switchBg"/>
+                    <Bitmap profile="pdBarFill" position="470px -15px" size="45px 13px" name="switchKnob"/>
+                    <Text profile="pdCellStatus" position="580px 0px" size="110px 43px" name="state"/>
+                </ListItem>
+            </SmoothList>
+        </Bitmap>
+
+        <BoxLayout profile="fs25_dialogButtonBox" size="712px 60px" id="buttonBox">
+            <Button profile="buttonOK" text="$l10n_pdo_btnToggleMonth" onClick="onClickToggleMonth" id="toggleMonthButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnAllMonthsOn" onClick="onClickAllMonths" id="allMonthsButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnScheduleOff" onClick="onClickScheduleState" id="stateButton"/>
+            <Button profile="buttonOK" text="$l10n_pdo_btnSave" onClick="onClickSave" id="saveButton"/>
+            <Button profile="buttonBack" text="$l10n_pdo_btnCancel" onClick="onClickBack" id="cancelButton"/>
+        </BoxLayout>
+    </GuiElement>
+</GUI>

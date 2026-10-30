@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="depotPallet5000" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="i3dConverter" version="1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/buildingShader.xml"/>
+    <File fileId="5" filename="../textures/depot_mask.dds"/>
+    <File fileId="2" filename="../textures/depot_stock_diffuse.dds"/>
+    <File fileId="3" filename="../textures/depot_stock_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="default" materialId="1" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="depot_stock" materialId="2" customShaderId="4">
+      <Texture fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="mMaskMap" fileId="5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="depotPallet5000.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="depotPallet5000_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" staticFriction="1" dynamicFriction="1" density="0.0001" clipDistance="150" nodeId="12" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="1">
+      <TransformGroup name="collisions" nodeId="13">
+        <Shape name="floorCollision01" translation="0 0.061 -0.54" shapeId="2" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3dfb83" staticFriction="1" dynamicFriction="1" density="0.0001" nodeId="14" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="1"/>
+        <Shape name="floorCollision02" translation="0 0.061 -0.18" shapeId="2" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3dfb83" staticFriction="1" dynamicFriction="1" density="0.0001" nodeId="15" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="1"/>
+        <Shape name="floorCollision03" translation="0 0.061 0.18" shapeId="2" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3dfb83" staticFriction="1" dynamicFriction="1" density="0.0001" nodeId="16" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="1"/>
+        <Shape name="floorCollision04" translation="0 0.061 0.54" shapeId="2" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3dfb83" staticFriction="1" dynamicFriction="1" density="0.0001" nodeId="17" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="1"/>
+      </TransformGroup>
+      <TransformGroup name="content" nodeId="18">
+        <Shape name="goods" shapeId="3" clipDistance="150" nodeId="19" castsShadows="true" receiveShadows="true" materialIds="2"/>
+      </TransformGroup>
+      <Shape name="dynamicMountTrigger" translation="0 0.847 0" shapeId="4" kinematic="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x20000" nodeId="20" castsShadows="false" receiveShadows="false" nonRenderable="true" materialIds="1"/>
+      <Shape name="palletVisual" shapeId="5" clipDistance="150" nodeId="21" castsShadows="true" receiveShadows="true" materialIds="2"/>
+    </Shape>
+  </Scene>
+
+</i3D>
