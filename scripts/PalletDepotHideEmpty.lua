@@ -1,10 +1,15 @@
--- Pallet Depot: hide empty materials in the production menu's details list.
+-- Pallet Depot: shorten the production menu's lists for a depot.
 --
--- A depot stores up to 184 products, so the "Incoming materials" / "Outgoing products" sections of the production
--- menu's details list are mostly 0 L rows. That list is built from the production point's fill type tables, so while
--- the menu functions that build it run for a depot, the tables are swapped for copies that only hold fill types with
--- stock, then restored. The products (production lines) list, the menu's buttons and its update loop are untouched.
--- One menu button (C) toggles the hiding on and off for the session.
+-- A depot stores up to 186 products, so the "Incoming materials" / "Outgoing products" sections of the production
+-- menu's details list are mostly 0 L rows, and the products (production lines) list shows every product. Both lists
+-- are built from the production point's tables, so while the menu functions that build them run for a depot, the
+-- tables are swapped for filtered copies, then restored:
+-- * details list: only fill types with stock
+-- * products list: products made by a factory the depot's farm owns, plus any product the depot has in stock (so
+--   goods unloaded by mistake can still be taken out). Factories = the farm's production points, without depots and
+--   without pass-through storages (every line puts out what it takes in)
+-- getSelectedProduction is wrapped too, so a selected row in the shortened products list maps to the right product.
+-- The menu's buttons and its update loop are untouched. One menu button (C) toggles the hiding on and off.
 
 PalletDepotHideEmpty = {}
 PalletDepotHideEmpty.MIN_LITERS = 0.5
@@ -21,10 +26,12 @@ PalletDepotHideEmpty.LIST_FUNCTIONS = {
     "getNumberOfSections", "getNumberOfItemsInSection", "getTitleForSectionHeader", "getCellTypeForItemInSection",
     "populateCellForItemInSection", "inj_getNumberOfSections", "inj_getNumberOfItemsInSection",
     "inj_getTitleForSectionHeader", "inj_getCellTypeForItemInSection", "inj_populateCellForItemInSection",
-    "onListSelectionChanged", "setSelectedProductionPoint", "updateProductionLists", "onFrameOpen", "pre_onFrameOpen"
+    "onListSelectionChanged", "setSelectedProductionPoint", "updateProductionLists", "onFrameOpen", "pre_onFrameOpen",
+    "getSelectedProduction"
 }
--- the production point tables the details list is built from
-PalletDepotHideEmpty.TABLES = {"inputFillTypeIdsArray", "outputFillTypeIdsArray", "inputFillTypeIds", "outputFillTypeIds"}
+-- the production point tables the details list and the products list are built from
+PalletDepotHideEmpty.TABLES = {"inputFillTypeIdsArray", "outputFillTypeIdsArray", "inputFillTypeIds", "outputFillTypeIds",
+    "productions"}
 
 local function logOnce(key, message, ...)
     if not PalletDepotHideEmpty.logged[key] then
@@ -34,12 +41,19 @@ local function logOnce(key, message, ...)
 end
 
 local function getSelectedDepot(frame)
-    local getSelected = PalletDepotHideEmpty.original.getSelectedProduction
-    if getSelected == nil then
-        return nil
+    local productionPoint = frame.selectedProductionPoint
+    if productionPoint == nil then
+        local getSelected = PalletDepotHideEmpty.original.getSelectedProduction
+        if getSelected == nil then
+            return nil
+        end
+        local ok, _, selectedPoint = pcall(getSelected, frame)
+        if not ok then
+            return nil
+        end
+        productionPoint = selectedPoint
     end
-    local ok, _, productionPoint = pcall(getSelected, frame)
-    if not ok or not PalletDepot.isDepot(productionPoint) or productionPoint.storage == nil then
+    if not PalletDepot.isDepot(productionPoint) or productionPoint.storage == nil then
         return nil
     end
     for _, name in ipairs(PalletDepotHideEmpty.TABLES) do
@@ -55,8 +69,61 @@ local function isStocked(productionPoint, fillTypeIndex)
     return (productionPoint.storage:getFillLevel(fillTypeIndex) or 0) > PalletDepotHideEmpty.MIN_LITERS
 end
 
-local function buildSnapshot(productionPoint, now)
-    local snapshot = {time = now}
+-- a storage-type production point: every line puts out exactly what it takes in
+local function isPassThrough(productionPoint)
+    for _, production in ipairs(productionPoint.productions or {}) do
+        local inputs, outputs = production.inputs or {}, production.outputs or {}
+        if #inputs ~= 1 or #outputs ~= 1 or inputs[1].type ~= outputs[1].type then
+            return false
+        end
+    end
+    return true
+end
+
+-- fill types put out by the factories the farm owns
+local function getOwnedOutputs(farmId)
+    local outputs = {}
+    local manager = g_currentMission ~= nil and g_currentMission.productionChainManager or nil
+    for _, productionPoint in ipairs(manager ~= nil and manager.productionPoints or {}) do
+        if productionPoint:getOwnerFarmId() == farmId and not PalletDepot.isDepot(productionPoint)
+            and not isPassThrough(productionPoint) then
+            for _, production in ipairs(productionPoint.productions or {}) do
+                for _, item in ipairs(production.outputs or {}) do
+                    if item.type ~= nil then
+                        outputs[item.type] = true
+                    end
+                end
+            end
+        end
+    end
+    return outputs
+end
+
+-- a depot product (production line) is shown when a factory of the farm makes it or the depot has it in stock
+local function buildProductions(productionPoint)
+    local owned = getOwnedOutputs(productionPoint:getOwnerFarmId())
+    local shown = {}
+    for _, production in ipairs(productionPoint.productions) do
+        local show = false
+        for _, item in ipairs(production.outputs or {}) do
+            if item.type ~= nil and (owned[item.type] or isStocked(productionPoint, item.type)) then
+                show = true
+            end
+        end
+        if show then
+            table.insert(shown, production)
+        end
+    end
+    logOnce("products", "products list shows %d of %d products", #shown, #productionPoint.productions)
+    -- never an empty products list
+    if #shown == 0 then
+        return productionPoint.productions
+    end
+    return shown
+end
+
+local function buildSnapshot(productionPoint, now, productions)
+    local snapshot = {time = now, productions = productions or buildProductions(productionPoint)}
     for _, name in ipairs({"inputFillTypeIdsArray", "outputFillTypeIdsArray"}) do
         local stocked = {}
         for _, fillTypeIndex in ipairs(productionPoint[name]) do
@@ -79,19 +146,22 @@ local function buildSnapshot(productionPoint, now)
 end
 
 -- filtered copies of the tables, rebuilt only when forced (button), when another depot gets selected, or when a
--- list starts a full reload, never while a list draws its rows, so row counts and contents come from one copy
+-- list starts a full reload, never while a list draws its rows, so row counts and contents come from one copy.
+-- The products copy is kept on a list reload, so the products list's rows never shift under the selection
 local function getSnapshot(productionPoint, force)
     local snapshot = PalletDepotHideEmpty.snapshots[productionPoint]
     local now = g_time or 0
+    local keepProductions = false
     if PalletDepotHideEmpty.lastSelected ~= productionPoint then
         PalletDepotHideEmpty.lastSelected = productionPoint
         force = true
     end
     if force == "reload" then
         force = snapshot ~= nil and now - snapshot.time > PalletDepotHideEmpty.SNAPSHOT_MAX_AGE
+        keepProductions = true
     end
     if force or snapshot == nil then
-        snapshot = buildSnapshot(productionPoint, now)
+        snapshot = buildSnapshot(productionPoint, now, keepProductions and snapshot ~= nil and snapshot.productions or nil)
         PalletDepotHideEmpty.snapshots[productionPoint] = snapshot
     end
     return snapshot
@@ -138,7 +208,11 @@ function PalletDepotHideEmpty.toggle(frame)
         getSnapshot(productionPoint, true)
     end
 
-    -- re-run the menu's own "product selected" handler, which rebuilds the details list, and keep its scroll position
+    -- rebuild the products list, then re-run the menu's own "product selected" handler, which rebuilds the details
+    -- list, and keep its scroll position
+    if frame.productsList ~= nil and frame.productsList.reloadData ~= nil then
+        frame.productsList:reloadData()
+    end
     local detailsList = frame.detailsList
     local viewOffset = detailsList ~= nil and detailsList.viewOffset or nil
     if frame.productsList ~= nil and frame.onListSelectionChanged ~= nil then
@@ -181,6 +255,13 @@ if InGameMenuProductionFrame ~= nil then
             InGameMenuProductionFrame[name] = wrap(name, InGameMenuProductionFrame[name])
             table.insert(wrapped, name)
         end
+    end
+    -- each time the menu opens, stock and owned factories are read again
+    if InGameMenuProductionFrame.onFrameOpen ~= nil then
+        InGameMenuProductionFrame.onFrameOpen = Utils.prependedFunction(InGameMenuProductionFrame.onFrameOpen, function()
+            PalletDepotHideEmpty.snapshots = {}
+            PalletDepotHideEmpty.lastSelected = nil
+        end)
     end
     if InGameMenuProductionFrame.updateMenuButtons ~= nil then
         InGameMenuProductionFrame.updateMenuButtons = Utils.appendedFunction(InGameMenuProductionFrame.updateMenuButtons,
