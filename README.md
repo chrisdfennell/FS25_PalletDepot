@@ -1,35 +1,90 @@
-# FS25 Pallet Depot
+# Pallet Depot for Farming Simulator 25
 
-A Farming Simulator 25 mod: a pallet hall that stores your products and sends them on. Drop pallets on the unload pad at the front, then choose per product whether it stays in storage, comes out as pallets at the pickup lanes at the back, is delivered to your other productions, or is sold every full hour.
-
-- Two shop items, each with up to 1,000,000 L storage per product: **Food & Drinks** and **Textiles & Goods**
-- FedMods products are included when those packs are loaded
-- Productions window (Right Shift + P) for all productions: inputs/outputs, recipes, finances, logistics, schedules, auto-management, CSV export
-- Optional own 1,000 L / 5,000 L pallets for any production
-- Working roller doors, no daily upkeep
+A pallet hall that stores your products and sends them on. Drop pallets on the unload pad at the front, then choose per product whether it stays in storage, comes out as pallets at the pickup lanes at the back, is delivered to your other productions, or is sold every full hour.
 
 Pallets only: bulk goods, field crops and bales are not accepted.
 
-## Layout
+## Features
+
+**Two depots** in the shop (price 50,000, no daily upkeep), each with its own storage of up to 1,000,000 L per product:
+
+| Shop item | Sign | Products |
+|---|---|---|
+| Pallet Depot: Food & Drinks | green | food, drinks, vegetables, fruit |
+| Pallet Depot: Textiles & Goods | blue | textiles and other goods |
+
+- **FedMods support**: the FedMods products are included when those packs are loaded (standard or ProEdition); without them the depots offer the base-game products.
+- **Per-depot options**: capacity of 100,000 / 500,000 / 1,000,000 L per product.
+- **Own pallets for every production**: any production with pickup lanes can spawn the game's pallets or this mod's 1,000 L / 5,000 L pallets, which take any product of any map or mod.
+- **Building**: LODs and collisions, 84 rack places that fill up as the stock grows, pickup lanes that stack pallets two high, working roller doors on three sides, and an AutoDrive route.
+- **Daily report**: at 06:00 every depot with activity shows how much came in, went out, was delivered and was sold.
+- **Hide empty materials**: the game's production menu hides the 0 L rows of a depot (toggle with C).
+
+**Productions window** (Right Shift + P) for *all* your productions, not only depots:
+
+| Key | Main page | Logistics page |
+|---|---|---|
+| X | inputs / outputs | schedule (months a line runs) |
+| C | recipes | hide inactive |
+| Q | finances | spawn goods |
+| E | logistics | |
+| Enter | settings | change output |
+| Backspace | spawn goods | recipe on / off |
+| Space | CSV export | |
+| Esc | close | close |
+
+The settings page has auto-management (pauses stuck lines so they stop costing money, restarts them when they can run), alerts (paused or restarted lines, low inputs, nearly full outputs), and the capacity and pallet options of the selected building. Settings, schedules and options are saved with the savegame and shared with all players.
+
+## Compatibility
+
+- Multiplayer supported. Server and clients need the same zip.
+- **Production Storage Control** (optional): "Spawn goods" opens its spawn window with the product already selected. Without it the button is hidden.
+- **AutoDrive** (optional): imports the depot route when the depot is placed.
+- **Price Ticker** (optional): the depots are taken out of its list of selling stations. Price Ticker's files are not changed.
+
+## Installation
+
+Download `FS25_PalletDepot.zip` (or build it, see below) and put it into your mods folder, e.g. `Documents\My Games\FarmingSimulator2025\mods\`. Don't rename the zip: savegames would treat it as a different mod.
+
+## Repository layout
 
 | Path | Contents |
 |---|---|
-| `modDesc.xml`, `scripts/`, `gui/`, `l10n/` | Mod definition, Lua scripts, dialogs, translations |
-| `placeables/`, `i3d/`, `vehicles/`, `textures/`, `store/` | Game assets that go into the zip |
-| `src/` | PNG sources of the textures and store images |
-| `tools/` | Python/Blender pipeline that generates the model, textures, placeables and pallets and builds the zip |
+| `modDesc.xml` | Mod definition, all texts (English, German), full changelog |
+| `scripts/` | Lua scripts (one file per feature) |
+| `gui/` | Productions window and schedule dialog |
+| `placeables/`, `i3d/`, `vehicles/`, `textures/`, `store/` | Game files packed into the zip (generated, see below) |
+| `src/` | PNG sources of the textures and shop images |
+| `tools/` | Python and Blender pipeline that generates the model, textures, placeables and pallets and builds the zip |
+| `build/` | Build output; only `products.json` and `i3d_mappings.json` are committed |
 
 ## Building
 
-The model and textures are generated, not hand-made. `build/products.json` and `build/i3d_mappings.json` are committed, so `gen_placeables.py` works without rerunning the steps before it. The tools expect Blender 5, the GIANTS Editor 10 (for `textureTool.exe`) and the game installed at the default Steam path (see the constants at the top of each script).
+Building, textures and pallets are generated by scripts, not modelled by hand; `tools/layout.py` holds all positions. You need:
 
-```
-python tools/make_textures.py                                   # textures -> src/textures, textures/*.dds
-blender --background --factory-startup --python tools/build_warehouse.py
-python tools/finish_i3d.py                                      # i3d checks, food/goods variants -> build/i3d_mappings.json
-python tools/products.py                                        # product table -> build/products.json (scans your mods folder for FedMods)
-python tools/gen_placeables.py                                  # placeables/*.xml
-python tools/build_mod.py                                       # validate and zip -> build/FS25_PalletDepot.zip
+- Python 3
+- Blender 5 with the GIANTS I3D exporter (10.0.x)
+- GIANTS Editor 10 (for `textureTool.exe`)
+- Farming Simulator 25 (reads `maps_fillTypes.xml`)
+
+The paths to these are constants at the top of the scripts (default Steam and install locations); change them if yours differ.
+
+Run from the repository root:
+
+```sh
+python tools/make_textures.py                                            # textures -> src/textures/, textures/*.dds
+blender --background --factory-startup --python tools/build_warehouse.py # building -> i3d/depot.i3d, build/depot.blend
+python tools/finish_i3d.py                                               # checks, food/goods i3d, build/i3d_mappings.json
+blender --background --factory-startup --python tools/build_pallets.py   # pallets -> vehicles/*.i3d
+python tools/gen_pallets.py                                              # vehicles/depotPallet*.xml
+blender --background build/depot.blend --python tools/render_store.py    # shop images and mod icon -> store/
+python tools/build_mod.py                                                # validate and zip -> build/FS25_PalletDepot.zip
 ```
 
-Copy `build/FS25_PalletDepot.zip` into your FS25 `mods` folder.
+`build_mod.py` regenerates the product lists (`products.py`, from the game data, `tools/product_map.csv` and the FedMods packs in your mods folder) and the placeable XMLs (`gen_placeables.py`) before it validates and zips the mod. `--bump` raises the version in `modDesc.xml` first. It checks XML, i3d mappings, file references, translations, Lua syntax and the GIANTS limits (at most 128 files, Lua files at most 0.5 MB).
+
+For script or XML changes only, `build_mod.py` alone is enough; rerun the earlier steps only when the model, textures or layout change.
+
+## Credits
+
+Building, textures and scripts by Fennell. Sign lettering set in Inter (SIL Open Font License).
